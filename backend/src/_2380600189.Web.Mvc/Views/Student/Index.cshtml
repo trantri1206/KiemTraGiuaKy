@@ -1,0 +1,112 @@
+@using _2380600189.Exams.Dto
+@model List<ExamListDto>
+@{
+    Layout = "~/Views/Shared/Layout/_Layout.cshtml";
+    ViewBag.Title = "Cổng Thi Trực Tuyến Sinh Viên - Lexora TOEIC";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark font-weight-bold">
+                    <i class="fas fa-graduation-cap text-success mr-2"></i>Cổng Thi Trực Tuyến Sinh Viên
+                </h1>
+            </div>
+            <div class="col-sm-6 text-right">
+                <span class="badge badge-primary px-3 py-2" style="font-size: 0.9rem;">
+                    <i class="fas fa-id-card mr-1"></i> MSSV: 2380600189
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+    <div class="container-fluid">
+        <!-- Banner -->
+        <div class="card bg-gradient-navy text-white shadow-sm mb-4" style="border-radius: 14px; background: linear-gradient(135deg, #0F1E36 0%, #1E3A8A 100%);">
+            <div class="card-body p-4">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h3 class="font-weight-bold mb-2">Hệ Thống Khảo Thí TOEIC Reading 100 Câu Chuẩn ETS</h3>
+                        <p class="mb-3 text-light" style="opacity: 0.9;">
+                            Làm bài trực tuyến với đồng hồ đếm ngược 75 phút, tự động nộp bài khi hết giờ, thang điểm chuẩn ETS từ 5 - 495 điểm và lời giải chi tiết từng câu.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 text-white-50 small">
+                            <span class="mr-3"><i class="fas fa-clock text-warning mr-1"></i> 75 phút thi</span>
+                            <span class="mr-3"><i class="fas fa-list-ol text-info mr-1"></i> 100 câu hỏi (Part 5, 6, 7)</span>
+                            <span class="mr-3"><i class="fas fa-mobile-alt text-success mr-1"></i> Tối ưu giao diện Mobile & Web</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center mt-3 mt-md-0">
+                        <div style="font-size: 5rem; color: #10B981; opacity: 0.85;">
+                            <i class="fas fa-book-reader"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="font-weight-bold text-dark mb-3">
+            <i class="fas fa-clipboard-list text-primary mr-2"></i>Các Ca Thi Đang Được Mở
+        </h5>
+
+        @if (Model == null || Model.Count == 0)
+        {
+            <div class="card shadow-sm text-center p-5">
+                <i class="fas fa-inbox fa-3x text-muted mb-3"></i>
+                <h5 class="text-secondary">Hiện chưa có ca thi nào được kích hoạt từ Giảng viên.</h5>
+                <p class="text-muted small">Vui lòng chờ giảng viên tải đề và bấm "Xuất bản đề thi".</p>
+            </div>
+        }
+        else
+        {
+            <div class="row">
+                @foreach (var exam in Model)
+                {
+                    <div class="col-lg-6 mb-4">
+                        <div class="card shadow-sm h-100" style="border-radius: 12px; border: 1px solid #E2E8F0;">
+                            <div class="card-body p-4 d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <span class="badge badge-success px-3 py-1 font-weight-bold">
+                                        <i class="fas fa-check-circle mr-1"></i>Đang mở thi
+                                    </span>
+                                    <span class="badge badge-light border text-muted">
+                                        <i class="fas fa-calendar-alt mr-1"></i>@exam.CreationTime.ToString("dd/MM/yyyy")
+                                    </span>
+                                </div>
+
+                                <h4 class="font-weight-bold text-dark mb-2">@exam.Title</h4>
+                                <p class="text-muted small mb-3 flex-grow-1">
+                                    @(string.IsNullOrWhiteSpace(exam.Description) ? "Đề thi TOEIC Reading chuẩn hóa ETS 100 câu." : exam.Description)
+                                </p>
+
+                                <div class="p-3 bg-light rounded mb-3">
+                                    <div class="row text-center">
+                                        <div class="col-4 border-right">
+                                            <div class="text-muted small">Thời gian</div>
+                                            <div class="font-weight-bold text-dark">@exam.DurationMinutes phút</div>
+                                        </div>
+                                        <div class="col-4 border-right">
+                                            <div class="text-muted small">Số câu</div>
+                                            <div class="font-weight-bold text-primary">@exam.TotalQuestions câu</div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="text-muted small">Thang điểm</div>
+                                            <div class="font-weight-bold text-success">5 - 495</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a asp-action="TakeExam" asp-route-id="@exam.Id" class="btn btn-primary btn-block font-weight-bold py-2 shadow-sm" style="border-radius: 8px;">
+                                    <i class="fas fa-pencil-alt mr-2"></i> BẮT ĐẦU VÀO LÀM BÀI
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</section>

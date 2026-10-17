@@ -1,0 +1,235 @@
+@using _2380600189.Exams.Dto
+@model List<ExamListDto>
+@{
+    ViewBag.Title = "Quản lý bài thi TOEIC";
+    var totalExams = Model.Count;
+    var activeExams = Model.Count(x => x.IsPublished);
+    var draftExams = totalExams - activeExams;
+    var totalQuestions = Model.Sum(x => x.TotalQuestions);
+    var totalAttempts = Model.Sum(x => x.TotalAttempts);
+}
+
+<div class="container-fluid px-lg-4">
+    <div class="lp-page-head">
+        <div>
+            <h1>Quản lý bài thi</h1>
+            <p>Tạo, import, xuất bản và quản lý các đề thi TOEIC Reading (Part 5 – 6 – 7).</p>
+        </div>
+        <div class="d-flex flex-wrap" style="gap:8px;">
+            <a id="btn-goto-students" asp-controller="Students" asp-action="Index" class="btn btn-outline-secondary" style="border-radius:10px;">
+                <i class="fas fa-user-graduate mr-1"></i> Quản lý sinh viên
+            </a>
+            <a id="btn-import-word" asp-action="Import" class="btn lp-btn-primary">
+                <i class="fas fa-file-import mr-1"></i> Import từ Word
+            </a>
+        </div>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show mx-2" role="alert" style="border-radius:12px;">
+            <i class="fas fa-check-circle mr-2"></i>@TempData["SuccessMessage"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+    }
+
+    <!-- KPI -->
+    <div class="row px-2 mt-2">
+        <div class="col-xl-3 col-md-6 mb-3">
+            <div class="lp-kpi">
+                <div>
+                    <div class="lp-kpi-label">Tổng đề thi</div>
+                    <div class="lp-kpi-value">@totalExams<small>đề</small></div>
+                    <div class="lp-kpi-sub">Trong ngân hàng đề</div>
+                </div>
+                <div class="lp-kpi-icon blue"><i class="fas fa-file-alt"></i></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-3">
+            <div class="lp-kpi">
+                <div>
+                    <div class="lp-kpi-label">Đang mở thi</div>
+                    <div class="lp-kpi-value">@activeExams<small>đề</small></div>
+                    <div class="lp-kpi-sub">Sinh viên thấy trên app</div>
+                </div>
+                <div class="lp-kpi-icon green"><i class="fas fa-broadcast-tower"></i></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-3">
+            <div class="lp-kpi">
+                <div>
+                    <div class="lp-kpi-label">Bản nháp</div>
+                    <div class="lp-kpi-value">@draftExams<small>đề</small></div>
+                    <div class="lp-kpi-sub">Chưa xuất bản</div>
+                </div>
+                <div class="lp-kpi-icon amber"><i class="fas fa-pencil-alt"></i></div>
+            </div>
+        </div>
+        <div class="col-xl-3 col-md-6 mb-3">
+            <div class="lp-kpi">
+                <div>
+                    <div class="lp-kpi-label">Tổng câu hỏi</div>
+                    <div class="lp-kpi-value">@totalQuestions<small>câu</small></div>
+                    <div class="lp-kpi-sub">@totalAttempts lượt làm bài</div>
+                </div>
+                <div class="lp-kpi-icon violet"><i class="fas fa-list-ol"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <div class="px-2">
+        <div class="lp-card">
+            <div class="lp-toolbar">
+                <div class="d-flex flex-wrap align-items-center" style="gap:10px;">
+                    <div class="lp-search">
+                        <i class="fas fa-search"></i>
+                        <input id="exam-search" type="text" class="form-control" placeholder="Tìm kiếm đề thi..." />
+                    </div>
+                    <div class="lp-tabs" id="exam-filter">
+                        <button type="button" class="active" data-filter="all">Tất cả (@totalExams)</button>
+                        <button type="button" data-filter="active">Đang mở (@activeExams)</button>
+                        <button type="button" data-filter="draft">Nháp (@draftExams)</button>
+                    </div>
+                </div>
+                <a asp-action="Import" class="btn btn-sm btn-light" style="border-radius:8px;">
+                    <i class="fas fa-download mr-1"></i> Mẫu file Word (.docx)
+                </a>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table lp-table" id="exam-table">
+                    <thead>
+                        <tr>
+                            <th>Đề thi</th>
+                            <th class="text-center">Thời gian</th>
+                            <th class="text-center">Số câu</th>
+                            <th class="text-center">Lượt thi</th>
+                            <th class="text-center">Điểm TB</th>
+                            <th class="text-center">Ngày tạo</th>
+                            <th class="text-center">Cho phép thi</th>
+                            <th class="text-right">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Count == 0)
+                        {
+                            <tr>
+                                <td colspan="8" class="text-center py-5 text-muted">
+                                    <i class="fas fa-folder-open fa-3x mb-3 d-block" style="color:#cbd5e1;"></i>
+                                    Chưa có đề thi nào trong hệ thống.<br />
+                                    <a asp-action="Import" class="btn btn-sm lp-btn-primary mt-3"><i class="fas fa-plus mr-1"></i> Import đề thi từ Word</a>
+                                </td>
+                            </tr>
+                        }
+                        @foreach (var item in Model)
+                        {
+                            <tr class="exam-row" data-status="@(item.IsPublished ? "active" : "draft")" data-title="@item.Title.ToLower()">
+                                <td>
+                                    <div class="d-flex align-items-center" style="gap:12px;">
+                                        <div class="lp-exam-icon"><i class="fas fa-book-open"></i></div>
+                                        <div>
+                                            <div class="font-weight-bold">@item.Title</div>
+                                            <small class="text-muted">Part 5 • Part 6 • Part 7 — ID #@item.Id</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="text-center">@item.DurationMinutes phút</td>
+                                <td class="text-center font-weight-bold">@item.TotalQuestions</td>
+                                <td class="text-center">@item.TotalAttempts</td>
+                                <td class="text-center">
+                                    @if (item.TotalAttempts > 0)
+                                    {
+                                        <span class="font-weight-bold text-success">@item.AverageScore</span><small class="text-muted">/495</small>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">—</span>
+                                    }
+                                </td>
+                                <td class="text-center"><small>@item.CreationTime.ToString("dd/MM/yyyy")<br />@item.CreationTime.ToString("HH:mm")</small></td>
+                                <td class="text-center">
+                                    <label class="lp-switch" title="Bật/tắt cho phép sinh viên làm bài">
+                                        <input type="checkbox" class="toggle-publish" data-id="@item.Id" @(item.IsPublished ? "checked" : "") />
+                                        <span class="track"></span>
+                                        <span class="lbl">@(item.IsPublished ? "Đang mở" : "Nháp")</span>
+                                    </label>
+                                </td>
+                                <td class="text-right" style="white-space:nowrap;">
+                                    <a asp-action="Preview" asp-route-id="@item.Id" class="lp-action" title="Xem trước đề"><i class="fas fa-eye"></i></a>
+                                    <a asp-action="Statistics" asp-route-id="@item.Id" class="lp-action" title="Thống kê"><i class="fas fa-chart-bar"></i></a>
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="lp-action" title="Sửa"><i class="fas fa-pen"></i></a>
+                                    <form asp-action="Delete" asp-route-id="@item.Id" method="post" class="d-inline"
+                                          onsubmit="return confirm('Bạn có chắc chắn muốn xóa đề thi này không?');">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="lp-action danger" title="Xóa"><i class="fas fa-trash-alt"></i></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="d-flex justify-content-between align-items-center px-3 py-2 border-top">
+                <small class="text-muted">Hiển thị <span id="exam-count">@totalExams</span> / @totalExams đề thi</small>
+                <small class="text-muted"><i class="fas fa-mobile-alt mr-1"></i>Đề "Đang mở" sẽ hiển thị trên app sinh viên</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(function () {
+            var currentFilter = 'all';
+            function applyFilter() {
+                var q = ($('#exam-search').val() || '').toLowerCase();
+                var shown = 0;
+                $('.exam-row').each(function () {
+                    var r = $(this);
+                    var ok = (currentFilter === 'all' || r.data('status') === currentFilter)
+                        && String(r.data('title')).indexOf(q) >= 0;
+                    r.toggle(ok);
+                    if (ok) shown++;
+                });
+                $('#exam-count').text(shown);
+            }
+            $('#exam-search').on('input', applyFilter);
+            $('#exam-filter button').on('click', function () {
+                $('#exam-filter button').removeClass('active');
+                $(this).addClass('active');
+                currentFilter = $(this).data('filter');
+                applyFilter();
+            });
+
+            $('.toggle-publish').on('change', function () {
+                var cb = $(this), id = cb.data('id'), row = cb.closest('tr');
+                cb.prop('disabled', true);
+                $.ajax({
+                    url: '/Exams/TogglePublish/' + id,
+                    type: 'POST',
+                    abpHandleError: false,
+                    success: function (res) {
+                        var data = (res && res.result) ? res.result : res;
+                        cb.prop('disabled', false);
+                        if (data && data.success) {
+                            cb.prop('checked', data.isPublished);
+                            cb.siblings('.lbl').text(data.isPublished ? 'Đang mở' : 'Nháp');
+                            row.data('status', data.isPublished ? 'active' : 'draft');
+                            toastr[data.isPublished ? 'success' : 'info'](data.isPublished
+                                ? 'Đã mở đề thi! Sinh viên trên app có thể làm bài.'
+                                : 'Đã chuyển đề thi về Bản nháp.');
+                        } else {
+                            cb.prop('checked', !cb.prop('checked'));
+                            toastr.error((data && data.message) || 'Có lỗi xảy ra.');
+                        }
+                    },
+                    error: function () {
+                        cb.prop('disabled', false).prop('checked', !cb.prop('checked'));
+                        toastr.error('Lỗi kết nối máy chủ.');
+                    }
+                });
+            });
+        });
+    </script>
+}

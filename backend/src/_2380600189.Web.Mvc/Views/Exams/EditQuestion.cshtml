@@ -1,0 +1,79 @@
+@using _2380600189.Exams.Dto
+@model UpdateQuestionDto
+@{
+    ViewBag.Title = "Chỉnh sửa Câu " + ViewBag.QuestionNumber;
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">
+                    <i class="fas fa-pencil-alt text-primary mr-2"></i>Chỉnh sửa Câu @ViewBag.QuestionNumber
+                </h1>
+                <small class="text-muted">Đề thi: <strong>@ViewBag.ExamTitle</strong></small>
+            </div>
+            <div class="col-sm-6 text-right">
+                <a asp-action="Preview" asp-route-id="@ViewBag.ExamId" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left mr-1"></i> Quay lại xem trước
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="card card-outline card-primary shadow-sm">
+            <form asp-action="EditQuestion" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" name="examId" value="@ViewBag.ExamId" />
+
+                <div class="card-body">
+                    <div class="form-group">
+                        <label asp-for="Content" class="font-weight-bold">Nội dung câu hỏi:</label>
+                        <textarea asp-for="Content" class="form-control" rows="3" placeholder="Nhập nội dung câu hỏi..."></textarea>
+                    </div>
+
+                    <h5 class="font-weight-bold text-secondary mt-4 mb-3">
+                        <i class="fas fa-check-double text-success mr-1"></i>Danh sách đáp án lựa chọn (Chọn Radio để đánh dấu đáp án đúng):
+                    </h5>
+
+                    <div class="row">
+                        @for (int i = 0; i < Model.Options.Count; i++)
+                        {
+                            <input type="hidden" name="Options[@i].Id" value="@Model.Options[i].Id" />
+                            <input type="hidden" name="Options[@i].OptionLabel" value="@Model.Options[i].OptionLabel" />
+
+                            <div class="col-md-6 mb-3">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text bg-light">
+                                            <input type="radio" name="CorrectOptionId" value="@Model.Options[i].Id" @(Model.Options[i].IsCorrect ? "checked" : "") required />
+                                            <span class="font-weight-bold ml-2">@Model.Options[i].OptionLabel</span>
+                                        </div>
+                                    </div>
+                                    <input type="text" name="Options[@i].Content" value="@Model.Options[i].Content" class="form-control" required />
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label asp-for="Explanation" class="font-weight-bold">
+                            <i class="fas fa-lightbulb text-warning mr-1"></i>Lời giải thích / Gợi ý câu trả lời:
+                        </label>
+                        <textarea asp-for="Explanation" class="form-control" rows="3" placeholder="Nhập hướng dẫn giải, ngữ pháp, từ vựng giải thích cho câu hỏi này..."></textarea>
+                    </div>
+                </div>
+
+                <div class="card-footer bg-white text-right">
+                    <button type="submit" class="btn btn-primary px-4 shadow-sm">
+                        <i class="fas fa-save mr-1"></i> Lưu thay đổi câu hỏi
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

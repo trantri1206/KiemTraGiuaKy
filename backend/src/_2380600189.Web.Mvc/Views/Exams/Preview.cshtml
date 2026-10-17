@@ -1,0 +1,222 @@
+@using _2380600189.Exams.Dto
+@model ExamDetailDto
+@{
+    ViewBag.Title = "Xem trước đề thi: " + Model.Title;
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-7">
+                <h1 class="m-0 text-dark font-weight-bold">
+                    <i class="fas fa-eye text-primary mr-2"></i>Xem trước đề thi: @Model.Title
+                </h1>
+            </div>
+            <div class="col-sm-5 text-right">
+                <a asp-action="Index" class="btn btn-outline-secondary mr-2">
+                    <i class="fas fa-list mr-1"></i> Danh sách
+                </a>
+                <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-outline-primary mr-2">
+                    <i class="fas fa-edit mr-1"></i> Sửa đề
+                </a>
+                <button class="btn @(Model.IsPublished ? "btn-success" : "btn-warning") shadow-sm" id="btnPublish" data-id="@Model.Id">
+                    <i class="fas @(Model.IsPublished ? "fa-check-circle" : "fa-upload") mr-1"></i>
+                    <span id="btnPublishText">@(Model.IsPublished ? "Đã xuất bản (Bấm để thu hồi)" : "Xuất bản đề thi")</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+                <i class="fas fa-check-circle mr-2"></i>@TempData["SuccessMessage"]
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+
+        <!-- Overview Card -->
+        <div class="card card-outline card-primary shadow-sm mb-4">
+            <div class="card-body">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h4 class="font-weight-bold text-dark mb-1">@Model.Title</h4>
+                        <p class="text-muted mb-2">@(string.IsNullOrWhiteSpace(Model.Description) ? "Không có mô tả bổ sung." : Model.Description)</p>
+                        <div class="d-flex flex-wrap gap-2 text-secondary small">
+                            <span class="mr-3"><i class="fas fa-stopwatch text-info mr-1"></i> Thời gian: <strong>@Model.DurationMinutes phút</strong></span>
+                            <span class="mr-3"><i class="fas fa-question-circle text-primary mr-1"></i> Tổng số câu: <strong>@Model.TotalQuestions câu</strong></span>
+                            <span class="mr-3"><i class="fas fa-random text-secondary mr-1"></i> Đổi câu hỏi: <strong>@(Model.CanShuffleQuestions ? "Có" : "Không")</strong></span>
+                            <span class="mr-3"><i class="fas fa-random text-secondary mr-1"></i> Đổi đáp án: <strong>@(Model.CanShuffleOptions ? "Có" : "Không")</strong></span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-md-right mt-3 mt-md-0">
+                        <div class="mb-2">
+                            <span class="badge @(Model.IsPublished ? "badge-success" : "badge-secondary") px-3 py-2" style="font-size: 1rem;" id="badgePublishStatus">
+                                <i class="fas @(Model.IsPublished ? "fa-globe" : "fa-lock") mr-1"></i>
+                                @(Model.IsPublished ? "ĐÃ XUẤT BẢN" : "BẢN NHÁP (CHƯA XUẤT BẢN)")
+                            </span>
+                        </div>
+                        <small class="text-muted d-block">
+                            <i class="far fa-calendar-alt mr-1"></i>Ngày tạo: @Model.CreationTime.ToString("dd/MM/yyyy HH:mm")
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Standalone Questions (Part 5) -->
+        @{
+            var part5Questions = Model.Questions.Where(q => q.PartSectionId == null).OrderBy(q => q.QuestionNumber).ToList();
+            var part5Sections = Model.Sections.Where(s => s.PartNumber == 5).ToList();
+        }
+
+        @if (part5Questions.Count > 0 || part5Sections.Count > 0)
+        {
+            <div class="card card-outline card-info shadow-sm mb-4">
+                <div class="card-header bg-light">
+                    <h3 class="card-title font-weight-bold text-dark">
+                        <i class="fas fa-feather-alt text-info mr-2"></i>PART 5: Incomplete Sentences (Câu hỏi độc lập)
+                    </h3>
+                </div>
+                <div class="card-body">
+                    @foreach (var q in part5Questions)
+                    {
+                        @await Html.PartialAsync("_QuestionPreviewCard.cshtml", (q, Model.Id))
+                    }
+                    @foreach (var sec in part5Sections)
+                    {
+                        @foreach (var q in sec.Questions)
+                        {
+                            @await Html.PartialAsync("_QuestionPreviewCard.cshtml", (q, Model.Id))
+                        }
+                    }
+                </div>
+            </div>
+        }
+
+        <!-- Part 6: Text Completion -->
+        @{
+            var part6Sections = Model.Sections.Where(s => s.PartNumber == 6).OrderBy(s => s.OrderIndex).ToList();
+        }
+        @if (part6Sections.Count > 0)
+        {
+            <div class="card card-outline card-warning shadow-sm mb-4">
+                <div class="card-header bg-light">
+                    <h3 class="card-title font-weight-bold text-dark">
+                        <i class="fas fa-file-alt text-warning mr-2"></i>PART 6: Text Completion (Câu hỏi nhóm theo bài đọc)
+                    </h3>
+                </div>
+                <div class="card-body">
+                    @foreach (var sec in part6Sections)
+                    {
+                        <div class="p-3 bg-light rounded border mb-4">
+                            @if (!string.IsNullOrWhiteSpace(sec.Title))
+                            {
+                                <h5 class="font-weight-bold text-primary mb-2"><i class="fas fa-paragraph mr-1"></i>@sec.Title</h5>
+                            }
+                            @if (!string.IsNullOrWhiteSpace(sec.ImageUrl))
+                            {
+                                <div class="text-center my-3">
+                                    <img src="@sec.ImageUrl" alt="Hình ảnh bài đọc" class="img-fluid rounded border shadow-sm" style="max-height: 400px;" />
+                                </div>
+                            }
+                            <div class="p-3 bg-white rounded border passage-text mb-3" style="font-size: 1.05rem; line-height: 1.7; white-space: pre-wrap;">@sec.PassageContent</div>
+
+                            <h6 class="font-weight-bold text-secondary mb-3"><i class="fas fa-question mr-1"></i>Danh sách câu hỏi phụ thuộc:</h6>
+                            @foreach (var q in sec.Questions.OrderBy(x => x.QuestionNumber))
+                            {
+                                @await Html.PartialAsync("_QuestionPreviewCard.cshtml", (q, Model.Id))
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+
+        <!-- Part 7: Reading Comprehension -->
+        @{
+            var part7Sections = Model.Sections.Where(s => s.PartNumber == 7).OrderBy(s => s.OrderIndex).ToList();
+        }
+        @if (part7Sections.Count > 0)
+        {
+            <div class="card card-outline card-success shadow-sm mb-4">
+                <div class="card-header bg-light">
+                    <h3 class="card-title font-weight-bold text-dark">
+                        <i class="fas fa-book-open text-success mr-2"></i>PART 7: Reading Comprehension (Đọc hiểu đoạn văn đơn / kép)
+                    </h3>
+                </div>
+                <div class="card-body">
+                    @foreach (var sec in part7Sections)
+                    {
+                        <div class="p-3 bg-light rounded border mb-4">
+                            @if (!string.IsNullOrWhiteSpace(sec.Title))
+                            {
+                                <h5 class="font-weight-bold text-success mb-2"><i class="fas fa-newspaper mr-1"></i>@sec.Title</h5>
+                            }
+                            @if (!string.IsNullOrWhiteSpace(sec.ImageUrl))
+                            {
+                                <div class="text-center my-3">
+                                    <img src="@sec.ImageUrl" alt="Hình ảnh bài đọc" class="img-fluid rounded border shadow-sm" style="max-height: 450px;" />
+                                </div>
+                            }
+                            <div class="p-3 bg-white rounded border passage-text mb-3" style="font-size: 1.05rem; line-height: 1.7; white-space: pre-wrap;">@sec.PassageContent</div>
+
+                            <h6 class="font-weight-bold text-secondary mb-3"><i class="fas fa-question mr-1"></i>Danh sách câu hỏi đọc hiểu:</h6>
+                            @foreach (var q in sec.Questions.OrderBy(x => x.QuestionNumber))
+                            {
+                                @await Html.PartialAsync("_QuestionPreviewCard.cshtml", (q, Model.Id))
+                            }
+                        </div>
+                    }
+                </div>
+            </div>
+        }
+
+    </div>
+</section>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $('#btnPublish').click(function () {
+                var btn = $(this);
+                var id = btn.data('id');
+                btn.prop('disabled', true);
+
+                $.ajax({
+                    url: '/Exams/TogglePublish/' + id,
+                    type: 'POST',
+                    success: function (res) {
+                        btn.prop('disabled', false);
+                        if (res.success) {
+                            if (res.isPublished) {
+                                btn.removeClass('btn-warning').addClass('btn-success');
+                                $('#btnPublishText').text('Đã xuất bản (Bấm để thu hồi)');
+                                btn.find('i').removeClass('fa-upload').addClass('fa-check-circle');
+                                $('#badgePublishStatus').removeClass('badge-secondary').addClass('badge-success').html('<i class="fas fa-globe mr-1"></i> ĐÃ XUẤT BẢN');
+                                toastr.success('Đề thi đã được xuất bản! Sinh viên trên điện thoại đã có thể xem và thi ngay.');
+                            } else {
+                                btn.removeClass('btn-success').addClass('btn-warning');
+                                $('#btnPublishText').text('Xuất bản đề thi');
+                                btn.find('i').removeClass('fa-check-circle').addClass('fa-upload');
+                                $('#badgePublishStatus').removeClass('badge-success').addClass('badge-secondary').html('<i class="fas fa-lock mr-1"></i> BẢN NHÁP (CHƯA XUẤT BẢN)');
+                                toastr.info('Đã thu hồi đề thi về trạng thái Bản nháp.');
+                            }
+                        } else {
+                            toastr.error(res.message || 'Có lỗi xảy ra.');
+                        }
+                    },
+                    error: function () {
+                        btn.prop('disabled', false);
+                        toastr.error('Lỗi kết nối máy chủ.');
+                    }
+                });
+            });
+        });
+    </script>
+}

@@ -1,0 +1,142 @@
+@using _2380600189.Exams.Dto
+@model UploadDocxResultDto
+@{
+    ViewBag.Title = "Tải lên đề thi TOEIC từ file Word";
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark"><i class="fas fa-file-upload text-primary mr-2"></i>Tạo Đề Thi Từ File Word (.docx)</h1>
+            </div>
+            <div class="col-sm-6 text-right">
+                <a asp-action="Index" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left mr-1"></i> Quay lại danh sách
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+
+        @if (!Model.Success && Model.Errors.Count > 0)
+        {
+            <div class="alert alert-danger shadow-sm border-0 mb-4">
+                <div class="d-flex align-items-center mb-2">
+                    <i class="fas fa-exclamation-triangle fa-2x mr-3"></i>
+                    <div>
+                        <h5 class="alert-heading font-weight-bold mb-0">PHÁT HIỆN SAI ĐỊNH DẠNG FILE WORD!</h5>
+                        <div class="small">Hệ thống đã hủy bỏ toàn bộ và KHÔNG lưu vào CSDL theo đúng quy định. Vui lòng sửa file theo các lỗi bên dưới rồi upload lại:</div>
+                    </div>
+                </div>
+                <hr class="my-2" />
+                <ul class="mb-0 pl-3">
+                    @foreach (var err in Model.Errors)
+                    {
+                        <li class="font-weight-bold mb-1"><i class="fas fa-times-circle mr-1 text-warning"></i>@err</li>
+                    }
+                </ul>
+            </div>
+        }
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card card-primary card-outline shadow-sm">
+                    <div class="card-header bg-white">
+                        <h3 class="card-title font-weight-bold">
+                            <i class="fas fa-cloud-upload-alt text-primary mr-2"></i>Chọn file Word đề thi (.docx)
+                        </h3>
+                    </div>
+                    <form asp-action="Import" method="post" enctype="multipart/form-data">
+                        @Html.AntiForgeryToken()
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="docxFile" class="font-weight-bold">Tệp tài liệu (.docx) chuẩn định dạng:</label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="docxFile" name="docxFile" accept=".docx" required>
+                                    <label class="custom-file-label" for="docxFile">Chọn file .docx từ máy tính...</label>
+                                </div>
+                                <small class="form-text text-muted mt-2">
+                                    <i class="fas fa-info-circle text-info mr-1"></i>Chỉ chấp nhận định dạng Word <code>.docx</code>. Hệ thống sẽ kiểm tra tính toàn vẹn 100% trước khi lưu.
+                                </small>
+                            </div>
+
+                            <div class="p-3 bg-light rounded border mt-3">
+                                <h6 class="font-weight-bold text-dark mb-2"><i class="fas fa-shield-alt text-success mr-2"></i>Quy chuẩn xác thực tự động:</h6>
+                                <ul class="small text-secondary mb-0 pl-3">
+                                    <li>Đầy đủ các thẻ tiêu đề và thời gian thi.</li>
+                                    <li>Đánh số thứ tự câu hỏi liên tục không được nhảy câu hoặc trùng lặp.</li>
+                                    <li>Mỗi câu hỏi bắt buộc có 4 đáp án (A, B, C, D) và ĐÚNG 1 đáp án đúng.</li>
+                                    <li>Part 6 & 7 bắt buộc có nội dung đoạn văn bài đọc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white text-right">
+                            <button type="submit" class="btn btn-primary btn-lg px-4 shadow-sm" id="btnUpload">
+                                <i class="fas fa-upload mr-2"></i> Tiến hành Phân tích & Lưu đề thi
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card card-outline card-info shadow-sm">
+                    <div class="card-header bg-white">
+                        <h3 class="card-title font-weight-bold text-info">
+                            <i class="fas fa-tags mr-2"></i>Quy chuẩn bộ Thẻ (Tags) trong File Word
+                        </h3>
+                    </div>
+                    <div class="card-body p-3" style="max-height: 520px; overflow-y: auto;">
+                        <p class="small text-muted mb-2">Định dạng file Word của bạn phải tuân thủ đúng bộ thẻ sau để hệ thống nhận diện:</p>
+
+                        <div class="bg-dark text-light p-3 rounded font-monospace small mb-3" style="font-family: Consolas, monospace; line-height: 1.5;">
+<span class="text-warning">[EXAM_TITLE]:</span> Đề thi TOEIC Reading Test 01<br/>
+<span class="text-warning">[EXAM_DESCRIPTION]:</span> Đề kiểm tra đọc hiểu TOEIC<br/>
+<span class="text-warning">[DURATION]:</span> 75<br/>
+<span class="text-warning">[SHUFFLE_QUESTIONS]:</span> FALSE<br/>
+<span class="text-warning">[SHUFFLE_OPTIONS]:</span> TRUE<br/>
+<br/>
+<span class="text-success">--- CÂU HỎI ĐỘC LẬP (PART 5) ---</span><br/>
+<span class="text-warning">[PART: 5]</span><br/>
+<span class="text-info">[QUESTION: 101]</span><br/>
+Ms. Durkin asked for volunteers to help -------- with the employee fitness program.<br/>
+[A] she<br/>
+<span class="text-success">[B*] her</span>  <em>(Đánh dấu * cho đáp án đúng)</em><br/>
+[C] hers<br/>
+[D] herself<br/>
+<span class="text-warning">[EXPLANATION]:</span> Cần đại từ tân ngữ 'her' đứng sau ngoại động từ 'help'.<br/>
+<span class="text-info">[END_QUESTION]</span><br/>
+<br/>
+<span class="text-success">--- NHÓM CÂU THEO BÀI ĐỌC (PART 6 & PART 7) ---</span><br/>
+<span class="text-warning">[PART: 6]</span><br/>
+<span class="text-warning">[PASSAGE: 131-134]</span><br/>
+<span class="text-warning">[PASSAGE_TITLE]:</span> Questions 131-134 refer to the following advertisement.<br/>
+With Global Strength Gym's 30-day trial period, you get the opportunity to try out our classes... ---131--- ...<br/>
+<span class="text-info">[QUESTION: 131]</span><br/>
+<span class="text-success">[A*] Throughout the trial, you pay nothing and sign no contract.</span><br/>
+[B] Weight-lifting classes are not currently available.<br/>
+[C] A cash deposit is required when you sign up for membership.<br/>
+[D] All questions should be e-mailed to customerservice@gsgym.com.<br/>
+<span class="text-warning">[EXPLANATION]:</span> Câu trước và sau nhấn mạnh tính dùng thử không rủi ro.<br/>
+<span class="text-info">[END_QUESTION]</span><br/>
+<span class="text-warning">[END_PASSAGE]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts {
+    <script>
+        $('.custom-file-input').on('change', function () {
+            var fileName = $(this).val().split('\\').pop();
+            $(this).next('.custom-file-label').addClass("selected").html(fileName);
+        });
+    </script>
+}

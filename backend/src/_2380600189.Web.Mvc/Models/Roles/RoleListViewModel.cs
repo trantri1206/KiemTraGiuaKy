@@ -1,0 +1,9 @@
+﻿using _2380600189.Roles.Dto;
+using System.Collections.Generic;
+
+namespace _2380600189.Web.Models.Roles;
+
+public class RoleListViewModel
+{
+    public IReadOnlyList<PermissionDto> Permissions { get; set; }
+}

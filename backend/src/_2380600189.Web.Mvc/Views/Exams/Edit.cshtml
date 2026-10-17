@@ -1,0 +1,66 @@
+@using _2380600189.Exams.Dto
+@model UpdateExamDto
+@{
+    ViewBag.Title = "Chỉnh sửa đề thi: " + Model.Title;
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark"><i class="fas fa-edit text-primary mr-2"></i>Chỉnh sửa thông tin đề thi</h1>
+            </div>
+            <div class="col-sm-6 text-right">
+                <a asp-action="Preview" asp-route-id="@Model.Id" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left mr-1"></i> Quay lại xem trước
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="card card-outline card-primary shadow-sm">
+            <form asp-action="Edit" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" asp-for="Id" />
+                <div class="card-body">
+                    <div class="form-group">
+                        <label asp-for="Title" class="font-weight-bold">Tên đề thi:</label>
+                        <input asp-for="Title" class="form-control" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Description" class="font-weight-bold">Mô tả đề thi:</label>
+                        <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="DurationMinutes" class="font-weight-bold">Thời gian làm bài (phút):</label>
+                        <input asp-for="DurationMinutes" type="number" min="5" max="300" class="form-control" style="max-width: 200px;" required />
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" asp-for="CanShuffleQuestions" id="switchShuffleQ">
+                            <label class="custom-control-label" for="switchShuffleQ">Cho phép hoán vị câu hỏi (Part 5)</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" asp-for="CanShuffleOptions" id="switchShuffleOpt">
+                            <label class="custom-control-label" for="switchShuffleOpt">Cho phép hoán vị các lựa chọn đáp án (A, B, C, D)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-white text-right">
+                    <button type="submit" class="btn btn-primary px-4 shadow-sm">
+                        <i class="fas fa-save mr-1"></i> Lưu thay đổi
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

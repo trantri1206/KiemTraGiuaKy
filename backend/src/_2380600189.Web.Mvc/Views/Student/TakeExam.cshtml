@@ -1,0 +1,532 @@
+@using _2380600189.Exams.Dto
+@model ExamDetailDto
+@{
+    Layout = null; // Standalone focused examination interface
+    ViewBag.Title = "Thi Trực Tuyến: " + Model.Title;
+
+    var allQuestions = new List<QuestionDto>();
+    foreach (var sec in Model.Sections)
+    {
+        allQuestions.AddRange(sec.Questions);
+    }
+    allQuestions.AddRange(Model.Questions);
+    allQuestions = allQuestions.OrderBy(q => q.QuestionNumber).ToList();
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@Model.Title - Hệ Thống Thi Trực Tuyến Lexora</title>
+    <!-- Google Font & Font Awesome & Bootstrap 4 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <style>
+        :root {
+            --navy: #0F1E36;
+            --primary: #2563EB;
+            --accent: #10B981;
+            --danger: #EF4444;
+            --bg: #F8FAFC;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: #1E293B;
+            margin: 0;
+            padding-bottom: 80px;
+        }
+        .exam-header {
+            background-color: var(--navy);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(15, 30, 54, 0.15);
+        }
+        .timer-badge {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 0.5px;
+        }
+        .timer-warning {
+            background-color: var(--danger) !important;
+            animation: pulse 1s infinite;
+        }
+        @@keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        .q-card {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #E2E8F0;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            transition: all 0.2s ease;
+        }
+        .q-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .passage-box {
+            background-color: #F1F5F9;
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .option-label-btn {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            border: 1px solid #CBD5E1;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: all 0.15s ease;
+        }
+        .option-label-btn:hover {
+            background-color: #F1F5F9;
+            border-color: var(--primary);
+        }
+        .option-label-btn.selected {
+            background-color: #EFF6FF;
+            border-color: var(--primary);
+            border-width: 2px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        .opt-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            background: #E2E8F0;
+            color: #334155;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        .option-label-btn.selected .opt-circle {
+            background: var(--primary);
+            color: white;
+        }
+        .grid-num-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            border: 1px solid #CBD5E1;
+            background: white;
+            font-size: 0.82rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin: 3px;
+            transition: all 0.15s ease;
+        }
+        .grid-num-btn.answered {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+        .bottom-action-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid #E2E8F0;
+            padding: 12px 24px;
+            box-shadow: 0 -4px 16px rgba(0,0,0,0.06);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Countdown Timer -->
+    <header class="exam-header py-3">
+        <div class="container-fluid px-4">
+            <div class="row align-items-center">
+                <div class="col-md-5">
+                    <div class="d-flex align-items-center">
+                        <div class="mr-3" style="width: 36px; height: 36px; border-radius: 8px; background: var(--accent); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h5 class="m-0 font-weight-bold">@Model.Title</h5>
+                            <small class="text-white-50">Thí sinh: <span id="displayCandidateName">Sinh viên HuTech</span> (MSSV: <span id="displayCandidateCode">2380600189</span>)</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center my-2 my-md-0">
+                    <div class="timer-badge" id="timerBadge">
+                        <i class="fas fa-stopwatch"></i>
+                        <span id="countdownDisplay">75:00</span>
+                    </div>
+                </div>
+                <div class="col-md-3 text-md-right">
+                    <button type="button" class="btn btn-success font-weight-bold px-4 shadow-sm" onclick="confirmSubmitExam()">
+                        <i class="fas fa-paper-plane mr-2"></i> NỘP BÀI THI
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid px-4 py-4">
+        <div class="row">
+            <!-- Left Column: Questions List -->
+            <div class="col-lg-9">
+                <form id="examForm">
+                    <input type="hidden" id="examId" value="@Model.Id" />
+
+                    @* Part 5 *@
+                    <div class="mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge badge-primary px-3 py-2 mr-2" style="font-size: 0.95rem;">PART 5</span>
+                            <h5 class="m-0 font-weight-bold text-dark">Incomplete Sentences (Câu 101 - 130)</h5>
+                        </div>
+                        <p class="text-muted small">Chọn đáp án đúng nhất (A, B, C hoặc D) để hoàn thành câu.</p>
+
+                        @foreach (var q in allQuestions.Where(q => q.PartNumber == 5))
+                        {
+                            <div class="q-card" id="q-@q.Id">
+                                <div class="d-flex align-items-start mb-3">
+                                    <span class="badge badge-primary mr-2" style="font-size: 0.9rem;">Câu @q.QuestionNumber</span>
+                                    <div class="font-weight-bold text-dark" style="font-size: 1.05rem;">@q.Content</div>
+                                </div>
+                                <div class="row">
+                                    @foreach (var opt in q.Options)
+                                    {
+                                        <div class="col-md-6">
+                                            <div class="option-label-btn" onclick="selectAnswer(@q.Id, @opt.Id, this, @q.QuestionNumber)">
+                                                <span class="opt-circle">@opt.OptionLabel</span>
+                                                <span>@opt.Content</span>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    @* Part 6 *@
+                    <div class="mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge badge-info px-3 py-2 mr-2" style="font-size: 0.95rem;">PART 6</span>
+                            <h5 class="m-0 font-weight-bold text-dark">Text Completion (Câu 131 - 146)</h5>
+                        </div>
+
+                        @foreach (var sec in Model.Sections.Where(s => s.PartNumber == 6))
+                        {
+                            <div class="passage-box">
+                                <h6 class="font-weight-bold text-primary mb-2"><i class="fas fa-file-alt mr-2"></i>@(sec.Title ?? "Đoạn văn điền từ")</h6>
+                                <div style="white-space: pre-line;">@sec.PassageContent</div>
+                            </div>
+
+                            @foreach (var q in sec.Questions)
+                            {
+                                <div class="q-card" id="q-@q.Id">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <span class="badge badge-info mr-2" style="font-size: 0.9rem;">Câu @q.QuestionNumber</span>
+                                        <div class="font-weight-bold text-dark">@q.Content</div>
+                                    </div>
+                                    <div class="row">
+                                        @foreach (var opt in q.Options)
+                                        {
+                                            <div class="col-md-6">
+                                                <div class="option-label-btn" onclick="selectAnswer(@q.Id, @opt.Id, this, @q.QuestionNumber)">
+                                                    <span class="opt-circle">@opt.OptionLabel</span>
+                                                    <span>@opt.Content</span>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+
+                    @* Part 7 *@
+                    <div class="mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="badge badge-purple px-3 py-2 mr-2" style="font-size: 0.95rem; background-color: #7C3AED; color: white;">PART 7</span>
+                            <h5 class="m-0 font-weight-bold text-dark">Reading Comprehension (Câu 147 - 200)</h5>
+                        </div>
+
+                        @foreach (var sec in Model.Sections.Where(s => s.PartNumber == 7))
+                        {
+                            <div class="passage-box" style="border-left-color: #7C3AED;">
+                                <h6 class="font-weight-bold mb-2" style="color: #7C3AED;"><i class="fas fa-newspaper mr-2"></i>@(sec.Title ?? "Văn bản đọc hiểu")</h6>
+                                <div style="white-space: pre-line;">@sec.PassageContent</div>
+                            </div>
+
+                            @foreach (var q in sec.Questions)
+                            {
+                                <div class="q-card" id="q-@q.Id">
+                                    <div class="d-flex align-items-start mb-3">
+                                        <span class="badge mr-2 text-white" style="background-color: #7C3AED; font-size: 0.9rem;">Câu @q.QuestionNumber</span>
+                                        <div class="font-weight-bold text-dark">@q.Content</div>
+                                    </div>
+                                    <div class="row">
+                                        @foreach (var opt in q.Options)
+                                        {
+                                            <div class="col-md-6">
+                                                <div class="option-label-btn" onclick="selectAnswer(@q.Id, @opt.Id, this, @q.QuestionNumber)">
+                                                    <span class="opt-circle">@opt.OptionLabel</span>
+                                                    <span>@opt.Content</span>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right Column: Question Navigator Grid -->
+            <div class="col-lg-3">
+                <div class="card shadow-sm sticky-top" style="top: 80px; border-radius: 12px;">
+                    <div class="card-header bg-white py-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h6 class="m-0 font-weight-bold text-dark"><i class="fas fa-th mr-2 text-primary"></i>Danh Sách 100 Câu</h6>
+                            <span class="badge badge-success font-weight-bold" id="answeredCountBadge">0 / 100</span>
+                        </div>
+                    </div>
+                    <div class="card-body p-3" style="max-height: 480px; overflow-y: auto;">
+                        <div class="text-center">
+                            @foreach (var q in allQuestions)
+                            {
+                                <button type="button" class="grid-num-btn" id="grid-btn-@q.QuestionNumber" onclick="scrollToQuestion(@q.Id)">
+                                    @q.QuestionNumber
+                                </button>
+                            }
+                        </div>
+                    </div>
+                    <div class="card-footer bg-light p-3">
+                        <div class="d-flex justify-content-around small">
+                            <span><i class="fas fa-circle text-success mr-1"></i> Đã chọn</span>
+                            <span><i class="far fa-circle text-muted mr-1"></i> Chưa làm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Action Bar -->
+    <div class="bottom-action-bar d-flex justify-content-between align-items-center">
+        <div>
+            <span class="text-muted mr-2">Tiến độ bài làm:</span>
+            <strong class="text-primary" id="bottomProgressText">0 / 100 câu</strong>
+        </div>
+        <div>
+            <button type="button" class="btn btn-outline-secondary mr-2" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <i class="fas fa-arrow-up mr-1"></i> Lên đầu trang
+            </button>
+            <button type="button" class="btn btn-success font-weight-bold px-4 shadow-sm" onclick="confirmSubmitExam()">
+                <i class="fas fa-paper-plane mr-2"></i> NỘP BÀI THI
+            </button>
+        </div>
+    </div>
+
+    <!-- Result Modal -->
+    <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content" style="border-radius: 16px; overflow: hidden;">
+                <div class="modal-header bg-primary text-white py-3">
+                    <h5 class="modal-title font-weight-bold"><i class="fas fa-trophy mr-2"></i>KẾT QUẢ BÀI THI TOEIC READING</h5>
+                </div>
+                <div class="modal-body p-4 text-center" id="resultModalBody">
+                    <!-- Populated by JavaScript -->
+                </div>
+                <div class="modal-footer bg-light">
+                    <a asp-action="Index" class="btn btn-primary font-weight-bold px-4">
+                        <i class="fas fa-home mr-1"></i> Về Trang Danh Sách Ca Thi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const examId = @Model.Id;
+        const totalQuestions = @allQuestions.Count;
+        let selectedAnswers = {}; // questionId -> optionId
+        let secondsRemaining = @Model.DurationMinutes * 60;
+        let timerInterval = null;
+        let isSubmitted = false;
+        const startTime = new Date().toISOString();
+
+        // Start countdown timer
+        function startTimer() {
+            timerInterval = setInterval(function() {
+                if (secondsRemaining > 0) {
+                    secondsRemaining--;
+                    let m = Math.floor(secondsRemaining / 60);
+                    let s = secondsRemaining % 60;
+                    document.getElementById('countdownDisplay').textContent =
+                        (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+
+                    if (secondsRemaining <= 600) { // Under 10 mins
+                        document.getElementById('timerBadge').classList.add('timer-warning');
+                    }
+                } else {
+                    clearInterval(timerInterval);
+                    autoSubmitOnTimeUp();
+                }
+            }, 1000);
+        }
+
+        function selectAnswer(questionId, optionId, element, questionNumber) {
+            if (isSubmitted) return;
+
+            // Remove selected class from siblings
+            const parentCard = $(element).closest('.q-card');
+            parentCard.find('.option-label-btn').removeClass('selected');
+            $(element).addClass('selected');
+
+            selectedAnswers[questionId] = optionId;
+
+            // Update question navigator button
+            $('#grid-btn-' + questionNumber).addClass('answered');
+
+            // Update counters
+            const count = Object.keys(selectedAnswers).length;
+            $('#answeredCountBadge').text(count + ' / ' + totalQuestions);
+            $('#bottomProgressText').text(count + ' / ' + totalQuestions + ' câu');
+        }
+
+        function scrollToQuestion(questionId) {
+            const el = document.getElementById('q-' + questionId);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        function autoSubmitOnTimeUp() {
+            alert('HẾT GIỜ THI (75 phút)! Hệ thống đang tự động nộp bài và tính điểm cho bạn...');
+            submitExam(true);
+        }
+
+        function confirmSubmitExam() {
+            if (isSubmitted) return;
+            const count = Object.keys(selectedAnswers).length;
+            let msg = 'Bạn đã hoàn thành ' + count + ' / ' + totalQuestions + ' câu.\n';
+            if (count < totalQuestions) {
+                msg += 'Vẫn còn ' + (totalQuestions - count) + ' câu chưa làm!\n';
+            }
+            msg += 'Bạn có chắc chắn muốn nộp bài thi ngay bây giờ?';
+
+            if (confirm(msg)) {
+                submitExam(false);
+            }
+        }
+
+        function submitExam(isAuto) {
+            if (isSubmitted) return;
+            isSubmitted = true;
+            clearInterval(timerInterval);
+
+            // Prepare answers
+            const answersArray = [];
+            for (const qId in selectedAnswers) {
+                answersArray.push({
+                    questionId: parseInt(qId),
+                    selectedOptionId: parseInt(selectedAnswers[qId])
+                });
+            }
+
+            const payload = {
+                examId: examId,
+                candidateName: document.getElementById('displayCandidateName').textContent,
+                candidateCode: document.getElementById('displayCandidateCode').textContent,
+                startTime: startTime,
+                answers: answersArray
+            };
+
+            // Call API
+            $.ajax({
+                url: '/api/exam/submit',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(payload),
+                success: function(res) {
+                    showResultModal(res);
+                },
+                error: function(err) {
+                    alert('Lỗi khi nộp bài: ' + (err.responseText || 'Máy chủ bận, vui lòng thử lại!'));
+                    isSubmitted = false;
+                }
+            });
+        }
+
+        function showResultModal(res) {
+            let scoreColor = '#10B981';
+            if (res.score < 250) scoreColor = '#EF4444';
+            else if (res.score < 350) scoreColor = '#F59E0B';
+            else if (res.score < 420) scoreColor = '#2563EB';
+
+            let html = `
+                <div class="mb-3">
+                    <i class="fas fa-award fa-4x" style="color: ${scoreColor};"></i>
+                </div>
+                <h6 class="text-muted font-weight-bold text-uppercase">ĐIỂM THI TOEIC READING QUY ĐỔI (ETS)</h6>
+                <div class="display-3 font-weight-bold my-2" style="color: ${scoreColor};">
+                    ${res.score} <span class="text-muted" style="font-size: 1.5rem;">/ 495</span>
+                </div>
+                <div class="p-3 bg-light rounded my-3">
+                    <div class="row text-center">
+                        <div class="col-4 border-right">
+                            <div class="text-success font-weight-bold h4 m-0">${res.totalCorrect}</div>
+                            <small class="text-muted font-weight-bold">Câu đúng</small>
+                        </div>
+                        <div class="col-4 border-right">
+                            <div class="text-danger font-weight-bold h4 m-0">${res.totalWrong}</div>
+                            <small class="text-muted font-weight-bold">Câu sai</small>
+                        </div>
+                        <div class="col-4">
+                            <div class="text-secondary font-weight-bold h4 m-0">${res.totalSkipped}</div>
+                            <small class="text-muted font-weight-bold">Bỏ qua</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-left p-3 border rounded small text-secondary">
+                    <div><strong>Thí sinh:</strong> ${res.candidateName} (MSSV: ${res.candidateCode})</div>
+                    <div><strong>Thời gian hoàn thành:</strong> ${res.durationSpent}</div>
+                    <div><strong>Tỉ lệ chính xác:</strong> ${res.accuracyPercentage.toFixed(1)}%</div>
+                    <div><strong>Part 5:</strong> ${res.part5Correct}/30 • <strong>Part 6:</strong> ${res.part6Correct}/16 • <strong>Part 7:</strong> ${res.part7Correct}/54</div>
+                </div>
+            `;
+
+            document.getElementById('resultModalBody').innerHTML = html;
+            $('#resultModal').modal('show');
+        }
+
+        $(document).ready(function() {
+            startTimer();
+        });
+    </script>
+</body>
+</html>

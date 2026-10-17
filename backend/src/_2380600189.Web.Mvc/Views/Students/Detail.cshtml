@@ -1,0 +1,131 @@
+@using _2380600189.Exams.Dto
+@model StudentDetailDto
+@{
+    ViewBag.Title = "Hồ sơ & Lịch sử thi: " + Model.CandidateName;
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark font-weight-bold">
+                    <i class="fas fa-user-circle text-primary mr-2"></i>Hồ Sơ & Lịch Sử Làm Bài Của Thí Sinh
+                </h1>
+            </div>
+            <div class="col-sm-6 text-right">
+                <a asp-action="Index" class="btn btn-outline-secondary">
+                    <i class="fas fa-arrow-left mr-1"></i> Quay lại danh sách
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+
+        <!-- Student Summary Info Card -->
+        <div class="card card-outline card-primary shadow-sm mb-4" style="border-radius: 12px;">
+            <div class="card-body p-4">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <div class="d-flex align-items-center">
+                            <div class="mr-3" style="width: 58px; height: 58px; border-radius: 50%; background: linear-gradient(135deg, #2563EB, #1D4ED8); display: flex; align-items: center; justify-content: center; color: white; font-size: 26px; font-weight: bold; box-shadow: 0 4px 12px rgba(37,99,235,0.3);">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-weight-bold text-dark mb-1">@Model.CandidateName</h3>
+                                <div class="text-muted small">
+                                    <span class="badge badge-light border px-2 py-1 mr-2 text-dark">
+                                        <i class="fas fa-id-card text-primary mr-1"></i>MSSV: @(string.IsNullOrWhiteSpace(Model.CandidateCode) ? "N/A" : Model.CandidateCode)
+                                    </span>
+                                    <span><i class="fas fa-check-circle text-success mr-1"></i>Sinh viên đã đăng ký tham gia thi trên Mobile</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 text-md-right mt-3 mt-md-0">
+                        <div class="d-inline-flex gap-3">
+                            <div class="px-3 py-2 bg-light rounded text-center border mr-2">
+                                <div class="text-muted small">Tổng số lần thi</div>
+                                <div class="font-weight-bold text-primary h4 m-0">@Model.TotalAttempts</div>
+                            </div>
+                            <div class="px-3 py-2 bg-light rounded text-center border mr-2">
+                                <div class="text-muted small">Điểm cao nhất</div>
+                                <div class="font-weight-bold text-success h4 m-0">@Model.HighestScore <small class="text-muted" style="font-size: 13px;">/495</small></div>
+                            </div>
+                            <div class="px-3 py-2 bg-light rounded text-center border">
+                                <div class="text-muted small">Điểm trung bình</div>
+                                <div class="font-weight-bold text-warning h4 m-0 text-dark">@Model.AverageScore <small class="text-muted" style="font-size: 13px;">/495</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- History Attempts Table -->
+        <div class="card card-outline card-info shadow-sm" style="border-radius: 12px;">
+            <div class="card-header bg-white py-3">
+                <h5 class="m-0 font-weight-bold text-dark">
+                    <i class="fas fa-history mr-2 text-info"></i>Các Lượt Làm Bài Thi Đã Nộp
+                </h5>
+            </div>
+            <div class="card-body p-0 table-responsive">
+                <table class="table table-hover table-striped align-middle mb-0">
+                    <thead class="bg-light">
+                        <tr>
+                            <th style="width: 50px;" class="text-center">#</th>
+                            <th>Tên đề thi</th>
+                            <th style="width: 170px;">Thời gian bắt đầu</th>
+                            <th style="width: 150px;">Thời lượng làm bài</th>
+                            <th class="text-center" style="width: 120px;">Điểm TOEIC</th>
+                            <th class="text-center" style="width: 150px;">Đúng / Sai / Bỏ</th>
+                            <th class="text-center" style="width: 120px;">Độ chính xác</th>
+                            <th class="text-center" style="width: 150px;">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{ int attemptIndex = Model.Attempts.Count; }
+                        @foreach (var att in Model.Attempts)
+                        {
+                            <tr>
+                                <td class="text-center font-weight-bold text-muted">Lần @(attemptIndex--)</td>
+                                <td>
+                                    <div class="font-weight-bold text-dark">@att.ExamTitle</div>
+                                </td>
+                                <td>
+                                    <small class="text-dark font-weight-bold">
+                                        <i class="far fa-clock mr-1 text-muted"></i>@att.StartTime.ToString("dd/MM/yyyy HH:mm")
+                                    </small>
+                                </td>
+                                <td>
+                                    <span class="badge badge-light border"><i class="fas fa-stopwatch mr-1"></i>@att.DurationSpent</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="badge badge-success px-3 py-1 font-weight-bold" style="font-size: 1rem;">
+                                        @att.Score / 495
+                                    </span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="text-success font-weight-bold">@att.TotalCorrect</span> / 
+                                    <span class="text-danger font-weight-bold">@att.TotalWrong</span> / 
+                                    <span class="text-muted font-weight-bold">@att.TotalSkipped</span>
+                                </td>
+                                <td class="text-center font-weight-bold text-primary">
+                                    @att.AccuracyPercentage%
+                                </td>
+                                <td class="text-center">
+                                    <a asp-action="AttemptDetail" asp-route-id="@att.AttemptId" class="btn btn-sm btn-outline-info shadow-sm font-weight-bold">
+                                        <i class="fas fa-search-plus mr-1"></i> Chi tiết bài thi
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</section>

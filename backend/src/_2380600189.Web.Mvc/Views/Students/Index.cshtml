@@ -1,0 +1,166 @@
+@using _2380600189.Exams.Dto
+@model List<StudentSummaryDto>
+@{
+    ViewBag.Title = "Quản lý Sinh viên - Lexora TOEIC";
+    var totalStudents = Model.Count;
+    var totalAttempts = Model.Sum(s => s.TotalAttempts);
+    var avgHighestScore = totalStudents > 0 ? Math.Round(Model.Average(s => s.HighestScore), 1) : 0;
+}
+
+<div class="container-fluid px-lg-4">
+    <div class="lp-page-head">
+        <div>
+            <h1>Quản lý sinh viên</h1>
+            <p>Tra cứu danh sách thí sinh, mã sinh viên (MSSV), điểm số TOEIC Reading và lịch sử nộp bài từ App di động.</p>
+        </div>
+        <div class="d-flex flex-wrap" style="gap:8px;">
+            <a id="btn-goto-exams" asp-controller="Exams" asp-action="Index" class="btn btn-outline-secondary" style="border-radius:10px;">
+                <i class="fas fa-file-alt mr-1"></i> Quản lý bài thi
+            </a>
+            <a asp-controller="Exams" asp-action="Import" class="btn lp-btn-primary">
+                <i class="fas fa-file-import mr-1"></i> Import đề thi mới
+            </a>
+        </div>
+    </div>
+
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show mx-2" role="alert" style="border-radius:12px;">
+            <i class="fas fa-exclamation-circle mr-2"></i>@TempData["ErrorMessage"]
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+    }
+
+    <!-- KPI -->
+    <div class="row px-2 mt-2">
+        <div class="col-xl-4 col-md-6 mb-3">
+            <div class="lp-kpi">
+                <div>
+                    <div class="lp-kpi-label">Tổng số sinh viên</div>
+                    <div class="lp-kpi-value">@totalStudents<small>thí sinh</small></div>
+                    <div class="lp-kpi-sub">Đã đăng ký dự thi trên hệ thống</div>
+                </div>
+                <div class="lp-kpi-icon blue"><i class="fas fa-users"></i></div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-6 mb-3">
+            <div class="lp-kpi">
+                <div>
+                    <div class="lp-kpi-label">Điểm cao nhất trung bình</div>
+                    <div class="lp-kpi-value">@avgHighestScore<small>/ 495</small></div>
+                    <div class="lp-kpi-sub">Thang điểm chuẩn TOEIC Reading</div>
+                </div>
+                <div class="lp-kpi-icon green"><i class="fas fa-chart-line"></i></div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-md-6 mb-3">
+            <div class="lp-kpi">
+                <div>
+                    <div class="lp-kpi-label">Lượt nộp bài từ Mobile App</div>
+                    <div class="lp-kpi-value">@totalAttempts<small>lượt</small></div>
+                    <div class="lp-kpi-sub">Tự động chấm điểm & xếp loại</div>
+                </div>
+                <div class="lp-kpi-icon violet"><i class="fas fa-mobile-alt"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <div class="px-2">
+        <div class="lp-card">
+            <div class="lp-toolbar">
+                <div class="d-flex flex-wrap align-items-center" style="gap:10px;">
+                    <form method="get" asp-action="Index" class="d-inline-flex align-items-center">
+                        <div class="lp-search">
+                            <i class="fas fa-search"></i>
+                            <input name="search" type="text" class="form-control" placeholder="Tìm theo MSSV hoặc Họ tên..." value="@ViewBag.SearchTerm" />
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-primary ml-2" style="border-radius:10px; height:40px; padding:0 16px;">
+                            Tìm
+                        </button>
+                        @if (!string.IsNullOrWhiteSpace(ViewBag.SearchTerm))
+                        {
+                            <a asp-action="Index" class="btn btn-sm btn-light ml-2" style="border-radius:10px; height:40px; line-height:28px;">
+                                Xóa tìm
+                            </a>
+                        }
+                    </form>
+                </div>
+                <div class="text-muted small">
+                    <i class="fas fa-graduation-cap mr-1 text-primary"></i>MSSV mặc định: <strong>2380600189</strong>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table lp-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 60px;" class="text-center">STT</th>
+                            <th>Mã sinh viên (MSSV)</th>
+                            <th>Họ và tên thí sinh</th>
+                            <th class="text-center">Số lần thi</th>
+                            <th class="text-center">Điểm cao nhất</th>
+                            <th class="text-center">Điểm trung bình</th>
+                            <th>Lần thi gần nhất</th>
+                            <th class="text-right">Chi tiết</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Count == 0)
+                        {
+                            <tr>
+                                <td colspan="8" class="text-center py-5 text-muted">
+                                    <i class="fas fa-user-slash fa-3x mb-3 d-block" style="color:#cbd5e1;"></i>
+                                    Chưa có dữ liệu sinh viên nào phù hợp.<br />
+                                    <small>Sinh viên sau khi làm bài trên ứng dụng di động sẽ tự động đồng bộ kết quả về đây.</small>
+                                </td>
+                            </tr>
+                        }
+                        @{ int stt = 1; }
+                        @foreach (var s in Model)
+                        {
+                            <tr>
+                                <td class="text-center text-muted font-weight-bold">@(stt++)</td>
+                                <td>
+                                    <span class="badge badge-light border px-2 py-1 font-weight-bold text-dark" style="font-size: 0.9rem;">
+                                        <i class="fas fa-id-card text-primary mr-1"></i>@(string.IsNullOrWhiteSpace(s.CandidateCode) ? "N/A" : s.CandidateCode)
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="font-weight-bold" style="font-size: 0.95rem;">@s.CandidateName</div>
+                                    <small class="text-muted">
+                                        <i class="fas fa-book-open mr-1 text-info"></i>@s.LatestExamTitle
+                                    </small>
+                                </td>
+                                <td class="text-center">
+                                    <span class="badge badge-primary px-3 py-1 font-weight-bold">@s.TotalAttempts lần</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="font-weight-bold text-success" style="font-size: 1rem;">@s.HighestScore</span><small class="text-muted">/495</small>
+                                </td>
+                                <td class="text-center">
+                                    <span class="font-weight-bold text-warning" style="font-size: 1rem;">@s.AverageScore</span><small class="text-muted">/495</small>
+                                </td>
+                                <td>
+                                    <small class="text-dark d-block">
+                                        <i class="far fa-clock mr-1 text-secondary"></i>@s.LatestAttemptTime.ToString("dd/MM/yyyy HH:mm")
+                                    </small>
+                                </td>
+                                <td class="text-right">
+                                    <a asp-action="Detail" asp-route-id="@(string.IsNullOrWhiteSpace(s.CandidateCode) ? s.CandidateName : s.CandidateCode)"
+                                       class="btn btn-sm btn-outline-primary" style="border-radius:8px;">
+                                        <i class="fas fa-history mr-1"></i> Lịch sử thi
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="d-flex justify-content-between align-items-center px-3 py-2 border-top">
+                <small class="text-muted">Tổng cộng @totalStudents sinh viên</small>
+                <small class="text-muted"><i class="fas fa-database mr-1"></i>Dữ liệu đồng bộ trực tiếp từ SQL Server _2380600189Db</small>
+            </div>
+        </div>
+    </div>
+</div>

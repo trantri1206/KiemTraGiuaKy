@@ -1,0 +1,588 @@
+DEBUG 2026-10-17 16:06:24,732 [2    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2026-10-17 16:06:24,767 [2    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2026-10-17 16:06:24,779 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189.Web.Startup._2380600189WebMvcModule, _2380600189.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:06:24,781 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189._2380600189WebCoreModule, _2380600189.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:06:24,781 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189._2380600189ApplicationModule, _2380600189.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:06:24,782 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189._2380600189CoreModule, _2380600189.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:06:24,782 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:06:24,782 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:06:24,782 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:06:24,782 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:06:24,783 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189.EntityFrameworkCore._2380600189EntityFrameworkModule, _2380600189.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:06:24,783 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:06:24,783 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:06:24,783 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:06:24,783 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:06:24,784 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:06:24,784 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:06:24,785 [2    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2026-10-17 16:06:24,828 [2    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:06:24,828 [2    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:06:24,828 [2    ] o.Configuration.LanguageManagementConfig - Converted _2380600189 (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:06:24,829 [2    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:06:25,239 [2    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: _2380600189.EntityFrameworkCore._2380600189DbContext, _2380600189.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:06:25,346 [2    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2026-10-17 16:06:25,395 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2026-10-17 16:06:25,427 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2026-10-17 16:06:25,437 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: _2380600189
+DEBUG 2026-10-17 16:06:25,453 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2026-10-17 16:06:25,461 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2026-10-17 16:06:25,465 [2    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[_2380600189.MultiTenancy.Tenant, _2380600189.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[_2380600189.Authorization.Users.User, _2380600189.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2026-10-17 16:06:25,477 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 9 classes define auto mapping attributes
+DEBUG 2026-10-17 16:06:25,477 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Users.Dto.CreateUserDto
+DEBUG 2026-10-17 16:06:25,479 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Users.Dto.UserDto
+DEBUG 2026-10-17 16:06:25,479 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2026-10-17 16:06:25,479 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Sessions.Dto.UserLoginInfoDto
+DEBUG 2026-10-17 16:06:25,479 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Roles.Dto.PermissionDto
+DEBUG 2026-10-17 16:06:25,479 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2026-10-17 16:06:25,479 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.MultiTenancy.Dto.TenantDto
+DEBUG 2026-10-17 16:06:25,479 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+DEBUG 2026-10-17 16:06:25,479 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Web.Models.Roles.EditRoleModalViewModel
+WARN  2026-10-17 16:06:26,093 [2    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Exam' has a global query filter defined and is the required end of a relationship with the entity 'ExamAttempt'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2026-10-17 16:06:26,094 [2    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Exam' has a global query filter defined and is the required end of a relationship with the entity 'PartSection'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2026-10-17 16:06:26,094 [2    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Exam' has a global query filter defined and is the required end of a relationship with the entity 'Question'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+INFO  2026-10-17 16:06:27,061 [2    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,fa,ja,zh-Hans
+INFO  2026-10-17 16:06:27,630 [2    ] Microsoft.Hosting.Lifetime               - Now listening on: http://localhost:5000
+INFO  2026-10-17 16:06:27,631 [2    ] Microsoft.Hosting.Lifetime               - Application started. Press Ctrl+C to shut down.
+INFO  2026-10-17 16:06:27,631 [2    ] Microsoft.Hosting.Lifetime               - Hosting environment: Development
+INFO  2026-10-17 16:06:27,631 [2    ] Microsoft.Hosting.Lifetime               - Content root path: C:\Lập trình di động\KiemTra\backend\src\_2380600189.Web.Mvc
+INFO  2026-10-17 16:07:06,480 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 HEAD http://localhost:5000/api/exam/list - - -
+INFO  2026-10-17 16:07:06,934 [7    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '405 HTTP Method Not Supported'
+INFO  2026-10-17 16:07:06,934 [7    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '405 HTTP Method Not Supported'
+INFO  2026-10-17 16:07:06,937 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 HEAD http://localhost:5000/api/exam/list - 405 - - 458.1677ms
+INFO  2026-10-17 16:07:06,939 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/api/exam/list - - -
+INFO  2026-10-17 16:07:06,942 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:07:06,987 [9    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetPublishedExams", controller = "ExamApi", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[_2380600189.Exams.Dto.ExamListDto]]] GetPublishedExams() on controller _2380600189.Web.Controllers.ExamApiController (_2380600189.Web.Mvc).
+INFO  2026-10-17 16:07:06,992 [9    ] idateAntiforgeryTokenAuthorizationFilter - Skipping the execution of current filter as its not the most effective filter implementing the policy Microsoft.AspNetCore.Mvc.ViewFeatures.IAntiforgeryPolicy
+ERROR 2026-10-17 16:07:06,995 [9    ] Mvc.ExceptionHandling.AbpExceptionFilter - No component for supporting the service _2380600189.Web.Controllers.ExamApiController was found
+Castle.MicroKernel.ComponentNotFoundException: No component for supporting the service _2380600189.Web.Controllers.ExamApiController was found
+   at Castle.Windsor.WindsorContainer.Resolve(Type service)
+   at Castle.Windsor.MsDependencyInjection.ScopedWindsorServiceProvider.ResolveInstanceOrNull(Type serviceType, Boolean isOptional)
+   at Castle.Windsor.MsDependencyInjection.ScopedWindsorServiceProvider.GetServiceInternal(Type serviceType, Boolean isOptional)
+   at Castle.Windsor.MsDependencyInjection.ScopedWindsorServiceProvider.GetRequiredService(Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2026-10-17 16:07:07,041 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 16:07:07,062 [9    ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc) in 69.5482ms
+INFO  2026-10-17 16:07:07,063 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:07:07,064 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/api/exam/list - 500 - application/json;+charset=utf-8 124.9780ms
+INFO  2026-10-17 16:09:32,347 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/api/exam/list - - -
+INFO  2026-10-17 16:09:32,348 [3    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:09:32,354 [3    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetPublishedExams", controller = "ExamApi", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[_2380600189.Exams.Dto.ExamListDto]]] GetPublishedExams() on controller _2380600189.Web.Controllers.ExamApiController (_2380600189.Web.Mvc).
+INFO  2026-10-17 16:09:32,354 [3    ] idateAntiforgeryTokenAuthorizationFilter - Skipping the execution of current filter as its not the most effective filter implementing the policy Microsoft.AspNetCore.Mvc.ViewFeatures.IAntiforgeryPolicy
+ERROR 2026-10-17 16:09:32,354 [3    ] Mvc.ExceptionHandling.AbpExceptionFilter - No component for supporting the service _2380600189.Web.Controllers.ExamApiController was found
+Castle.MicroKernel.ComponentNotFoundException: No component for supporting the service _2380600189.Web.Controllers.ExamApiController was found
+   at Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, Arguments arguments, IReleasePolicy policy, Boolean ignoreParentContext)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2026-10-17 16:09:32,356 [3    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 16:09:32,356 [3    ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc) in 2.0148ms
+INFO  2026-10-17 16:09:32,356 [3    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:09:32,356 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/api/exam/list - 500 - application/json;+charset=utf-8 9.2697ms
+DEBUG 2026-10-17 16:12:31,193 [2    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2026-10-17 16:12:31,205 [2    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2026-10-17 16:12:31,212 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189.Web.Startup._2380600189WebMvcModule, _2380600189.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:12:31,213 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189._2380600189WebCoreModule, _2380600189.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:12:31,213 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189._2380600189ApplicationModule, _2380600189.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:12:31,213 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189._2380600189CoreModule, _2380600189.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:12:31,213 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:12:31,213 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:12:31,214 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:12:31,214 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:12:31,214 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189.EntityFrameworkCore._2380600189EntityFrameworkModule, _2380600189.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:12:31,215 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:12:31,215 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:12:31,215 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:12:31,215 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:12:31,215 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:12:31,215 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:12:31,216 [2    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2026-10-17 16:12:31,249 [2    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:12:31,249 [2    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:12:31,249 [2    ] o.Configuration.LanguageManagementConfig - Converted _2380600189 (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:12:31,249 [2    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:12:31,410 [2    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: _2380600189.EntityFrameworkCore._2380600189DbContext, _2380600189.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:12:31,516 [2    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2026-10-17 16:12:31,562 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2026-10-17 16:12:31,587 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2026-10-17 16:12:31,606 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: _2380600189
+DEBUG 2026-10-17 16:12:31,635 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2026-10-17 16:12:31,643 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2026-10-17 16:12:31,646 [2    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[_2380600189.MultiTenancy.Tenant, _2380600189.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[_2380600189.Authorization.Users.User, _2380600189.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2026-10-17 16:12:31,658 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 9 classes define auto mapping attributes
+DEBUG 2026-10-17 16:12:31,658 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Users.Dto.CreateUserDto
+DEBUG 2026-10-17 16:12:31,660 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Users.Dto.UserDto
+DEBUG 2026-10-17 16:12:31,660 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2026-10-17 16:12:31,661 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Sessions.Dto.UserLoginInfoDto
+DEBUG 2026-10-17 16:12:31,661 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Roles.Dto.PermissionDto
+DEBUG 2026-10-17 16:12:31,661 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2026-10-17 16:12:31,661 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.MultiTenancy.Dto.TenantDto
+DEBUG 2026-10-17 16:12:31,661 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+DEBUG 2026-10-17 16:12:31,661 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Web.Models.Roles.EditRoleModalViewModel
+WARN  2026-10-17 16:12:32,259 [2    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Exam' has a global query filter defined and is the required end of a relationship with the entity 'ExamAttempt'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2026-10-17 16:12:32,259 [2    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Exam' has a global query filter defined and is the required end of a relationship with the entity 'PartSection'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2026-10-17 16:12:32,259 [2    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Exam' has a global query filter defined and is the required end of a relationship with the entity 'Question'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+INFO  2026-10-17 16:12:33,193 [2    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,fa,ja,zh-Hans
+INFO  2026-10-17 16:12:33,408 [2    ] Microsoft.Hosting.Lifetime               - Now listening on: http://localhost:5000
+INFO  2026-10-17 16:12:33,409 [2    ] Microsoft.Hosting.Lifetime               - Application started. Press Ctrl+C to shut down.
+INFO  2026-10-17 16:12:33,409 [2    ] Microsoft.Hosting.Lifetime               - Hosting environment: Development
+INFO  2026-10-17 16:12:33,409 [2    ] Microsoft.Hosting.Lifetime               - Content root path: C:\Lập trình di động\KiemTra\backend\src\_2380600189.Web.Mvc
+INFO  2026-10-17 16:13:55,007 [21   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/Exams - - -
+INFO  2026-10-17 16:13:55,072 [21   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.ExamsController.Index (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:13:55,114 [21   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Exams", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller _2380600189.Web.Controllers.ExamsController (_2380600189.Web.Mvc).
+WARN  2026-10-17 16:13:57,264 [21   ] Microsoft.EntityFrameworkCore.Query      - Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+WARN  2026-10-17 16:13:57,614 [22   ] Microsoft.EntityFrameworkCore.Query      - Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+INFO  2026-10-17 16:13:58,810 [20   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+INFO  2026-10-17 16:13:58,974 [20   ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.ExamsController.Index (_2380600189.Web.Mvc) in 3855.5589ms
+INFO  2026-10-17 16:13:58,974 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.ExamsController.Index (_2380600189.Web.Mvc)'
+ERROR 2026-10-17 16:13:58,988 [20   ] nostics.DeveloperExceptionPageMiddleware - An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at _2380600189.Web.Views.Shared.Components.SideBarUserArea.SideBarUserAreaViewModel.GetShownLoginName() in C:\Lập trình di động\KiemTra\backend\src\_2380600189.Web.Mvc\Views\Shared\Components\SideBarUserArea\SideBarUserAreaViewModel.cs:line 13
+   at AspNetCoreGeneratedDocument.Views_Shared_Components_SideBarUserArea_Default.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.ViewViewComponentResult.ExecuteAsync(ViewComponentContext context)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentInvoker.InvokeAsync(ViewComponentContext context)
+   at Microsoft.AspNetCore.Mvc.ViewComponents.DefaultViewComponentHelper.InvokeCoreAsync(ViewComponentDescriptor descriptor, Object arguments)
+   at AspNetCoreGeneratedDocument.Views_Shared_Layout__SideBar.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.RenderPartialCoreAsync(String partialViewName, Object model, ViewDataDictionary viewData, TextWriter writer)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.HtmlHelper.PartialAsync(String partialViewName, Object model, ViewDataDictionary viewData)
+   at AspNetCoreGeneratedDocument.Views_Shared_Layout__Layout.<>c__DisplayClass9_0.<<ExecuteAsync>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at AspNetCoreGeneratedDocument.Views_Shared_Layout__Layout.ExecuteAsync() in C:\Lập trình di động\KiemTra\backend\src\_2380600189.Web.Mvc\Views\Shared\Layout\_Layout.cshtml:line 14
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderLayoutAsync(ViewContext context, ViewBufferTextWriter bodyWriter)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at _2380600189.Authentication.JwtBearer.JwtTokenMiddleware.<>c__DisplayClass0_0.<<UseJwtTokenMiddleware>b__0>d.MoveNext() in C:\Lập trình di động\KiemTra\backend\src\_2380600189.Web.Core\Authentication\JwtBearer\JwtTokenMiddleware.cs:line 22
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+INFO  2026-10-17 16:13:58,995 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/Exams - 500 - text/plain;+charset=utf-8 3988.8055ms
+DEBUG 2026-10-17 16:17:26,339 [2    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2026-10-17 16:17:26,349 [2    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2026-10-17 16:17:26,358 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189.Web.Startup._2380600189WebMvcModule, _2380600189.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:17:26,359 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189._2380600189WebCoreModule, _2380600189.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:17:26,360 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189._2380600189ApplicationModule, _2380600189.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:17:26,360 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189._2380600189CoreModule, _2380600189.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:17:26,360 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:17:26,360 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:17:26,361 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:17:26,361 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:17:26,362 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189.EntityFrameworkCore._2380600189EntityFrameworkModule, _2380600189.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:17:26,362 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:17:26,362 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:17:26,362 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:17:26,362 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:17:26,362 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:17:26,363 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:17:26,364 [2    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2026-10-17 16:17:26,395 [2    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:17:26,395 [2    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:17:26,395 [2    ] o.Configuration.LanguageManagementConfig - Converted _2380600189 (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:17:26,395 [2    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:17:26,590 [2    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: _2380600189.EntityFrameworkCore._2380600189DbContext, _2380600189.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:17:26,749 [2    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2026-10-17 16:17:26,800 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2026-10-17 16:17:26,833 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2026-10-17 16:17:26,846 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: _2380600189
+DEBUG 2026-10-17 16:17:26,864 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2026-10-17 16:17:26,874 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2026-10-17 16:17:26,878 [2    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[_2380600189.MultiTenancy.Tenant, _2380600189.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[_2380600189.Authorization.Users.User, _2380600189.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2026-10-17 16:17:26,896 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 9 classes define auto mapping attributes
+DEBUG 2026-10-17 16:17:26,896 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Users.Dto.CreateUserDto
+DEBUG 2026-10-17 16:17:26,898 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Users.Dto.UserDto
+DEBUG 2026-10-17 16:17:26,899 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2026-10-17 16:17:26,899 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Sessions.Dto.UserLoginInfoDto
+DEBUG 2026-10-17 16:17:26,899 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Roles.Dto.PermissionDto
+DEBUG 2026-10-17 16:17:26,899 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2026-10-17 16:17:26,899 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.MultiTenancy.Dto.TenantDto
+DEBUG 2026-10-17 16:17:26,899 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+DEBUG 2026-10-17 16:17:26,899 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Web.Models.Roles.EditRoleModalViewModel
+WARN  2026-10-17 16:17:27,632 [2    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Exam' has a global query filter defined and is the required end of a relationship with the entity 'ExamAttempt'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2026-10-17 16:17:27,632 [2    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Exam' has a global query filter defined and is the required end of a relationship with the entity 'PartSection'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2026-10-17 16:17:27,632 [2    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Exam' has a global query filter defined and is the required end of a relationship with the entity 'Question'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+INFO  2026-10-17 16:17:28,886 [2    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,fa,ja,zh-Hans
+INFO  2026-10-17 16:17:29,056 [2    ] Microsoft.Hosting.Lifetime               - Now listening on: http://localhost:5000
+INFO  2026-10-17 16:17:29,058 [2    ] Microsoft.Hosting.Lifetime               - Application started. Press Ctrl+C to shut down.
+INFO  2026-10-17 16:17:29,058 [2    ] Microsoft.Hosting.Lifetime               - Hosting environment: Development
+INFO  2026-10-17 16:17:29,058 [2    ] Microsoft.Hosting.Lifetime               - Content root path: C:\Lập trình di động\KiemTra\backend\src\_2380600189.Web.Mvc
+INFO  2026-10-17 16:17:53,814 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/api/exam/list - - -
+INFO  2026-10-17 16:17:53,883 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:17:53,932 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetPublishedExams", controller = "ExamApi", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[_2380600189.Exams.Dto.ExamListDto]]] GetPublishedExams() on controller _2380600189.Web.Controllers.ExamApiController (_2380600189.Web.Mvc).
+INFO  2026-10-17 16:17:53,936 [14   ] idateAntiforgeryTokenAuthorizationFilter - Skipping the execution of current filter as its not the most effective filter implementing the policy Microsoft.AspNetCore.Mvc.ViewFeatures.IAntiforgeryPolicy
+INFO  2026-10-17 16:17:54,305 [14   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 16:17:54,336 [14   ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc) in 398.913ms
+INFO  2026-10-17 16:17:54,337 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:17:54,341 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/api/exam/list - 200 - application/json;+charset=utf-8 527.7771ms
+INFO  2026-10-17 16:18:09,649 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/Exams - - -
+INFO  2026-10-17 16:18:09,651 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.ExamsController.Index (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:18:09,661 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Exams", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller _2380600189.Web.Controllers.ExamsController (_2380600189.Web.Mvc).
+INFO  2026-10-17 16:18:09,714 [13   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+INFO  2026-10-17 16:18:09,937 [13   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 225.5257ms.
+INFO  2026-10-17 16:18:09,937 [13   ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.ExamsController.Index (_2380600189.Web.Mvc) in 276.1136ms
+INFO  2026-10-17 16:18:09,937 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.ExamsController.Index (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:18:09,938 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/Exams - 200 - text/html;+charset=utf-8 289.0855ms
+INFO  2026-10-17 16:18:24,207 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/Exams/Statistics/1 - - -
+INFO  2026-10-17 16:18:24,208 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.ExamsController.Statistics (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:18:24,237 [13   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Statistics", controller = "Exams", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Statistics(Int32) on controller _2380600189.Web.Controllers.ExamsController (_2380600189.Web.Mvc).
+WARN  2026-10-17 16:18:24,318 [13   ] Microsoft.EntityFrameworkCore.Query      - Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+INFO  2026-10-17 16:18:24,814 [9    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Statistics.
+INFO  2026-10-17 16:18:24,832 [9    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Statistics executed in 18.2072ms.
+INFO  2026-10-17 16:18:24,832 [9    ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.ExamsController.Statistics (_2380600189.Web.Mvc) in 594.5571ms
+INFO  2026-10-17 16:18:24,832 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.ExamsController.Statistics (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:18:24,832 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/Exams/Statistics/1 - 200 - text/html;+charset=utf-8 625.2886ms
+INFO  2026-10-17 16:18:38,672 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/Student - - -
+INFO  2026-10-17 16:18:38,672 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.StudentController.Index (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:18:38,677 [13   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Student", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller _2380600189.Web.Controllers.StudentController (_2380600189.Web.Mvc).
+INFO  2026-10-17 16:18:38,698 [13   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+INFO  2026-10-17 16:18:38,711 [13   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 13.6432ms.
+INFO  2026-10-17 16:18:38,711 [13   ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.StudentController.Index (_2380600189.Web.Mvc) in 33.8218ms
+INFO  2026-10-17 16:18:38,711 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.StudentController.Index (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:18:38,711 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/Student - 200 - text/html;+charset=utf-8 39.5179ms
+DEBUG 2026-10-17 16:30:35,477 [2    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2026-10-17 16:30:36,025 [2    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2026-10-17 16:30:36,038 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189.Web.Startup._2380600189WebMvcModule, _2380600189.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:30:36,040 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189._2380600189WebCoreModule, _2380600189.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:30:36,040 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189._2380600189ApplicationModule, _2380600189.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:30:36,041 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189._2380600189CoreModule, _2380600189.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:30:36,041 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:30:36,041 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:30:36,041 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:30:36,042 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:30:36,042 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189.EntityFrameworkCore._2380600189EntityFrameworkModule, _2380600189.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:30:36,042 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:30:36,043 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:30:36,043 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:30:36,043 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:30:36,043 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:30:36,044 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:30:36,045 [2    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2026-10-17 16:30:36,095 [2    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:30:36,095 [2    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:30:36,095 [2    ] o.Configuration.LanguageManagementConfig - Converted _2380600189 (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:30:36,095 [2    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:30:36,303 [2    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: _2380600189.EntityFrameworkCore._2380600189DbContext, _2380600189.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:30:36,471 [2    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2026-10-17 16:30:36,523 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2026-10-17 16:30:36,555 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2026-10-17 16:30:36,568 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: _2380600189
+DEBUG 2026-10-17 16:30:36,586 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2026-10-17 16:30:36,597 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2026-10-17 16:30:36,601 [2    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[_2380600189.MultiTenancy.Tenant, _2380600189.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[_2380600189.Authorization.Users.User, _2380600189.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2026-10-17 16:30:36,615 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 9 classes define auto mapping attributes
+DEBUG 2026-10-17 16:30:36,615 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Users.Dto.CreateUserDto
+DEBUG 2026-10-17 16:30:36,617 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Users.Dto.UserDto
+DEBUG 2026-10-17 16:30:36,618 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2026-10-17 16:30:36,618 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Sessions.Dto.UserLoginInfoDto
+DEBUG 2026-10-17 16:30:36,618 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Roles.Dto.PermissionDto
+DEBUG 2026-10-17 16:30:36,618 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2026-10-17 16:30:36,618 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.MultiTenancy.Dto.TenantDto
+DEBUG 2026-10-17 16:30:36,618 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+DEBUG 2026-10-17 16:30:36,618 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Web.Models.Roles.EditRoleModalViewModel
+WARN  2026-10-17 16:30:37,303 [2    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Exam' has a global query filter defined and is the required end of a relationship with the entity 'ExamAttempt'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2026-10-17 16:30:37,303 [2    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Exam' has a global query filter defined and is the required end of a relationship with the entity 'PartSection'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2026-10-17 16:30:37,303 [2    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Exam' has a global query filter defined and is the required end of a relationship with the entity 'Question'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+INFO  2026-10-17 16:30:38,504 [2    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,fa,ja,zh-Hans
+INFO  2026-10-17 16:30:38,682 [2    ] Microsoft.Hosting.Lifetime               - Now listening on: http://localhost:5000
+INFO  2026-10-17 16:30:38,684 [2    ] Microsoft.Hosting.Lifetime               - Application started. Press Ctrl+C to shut down.
+INFO  2026-10-17 16:30:38,684 [2    ] Microsoft.Hosting.Lifetime               - Hosting environment: Development
+INFO  2026-10-17 16:30:38,684 [2    ] Microsoft.Hosting.Lifetime               - Content root path: C:\Lập trình di động\KiemTra\backend\src\_2380600189.Web.Mvc
+INFO  2026-10-17 16:31:01,699 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/Students - - -
+INFO  2026-10-17 16:31:01,765 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.StudentsController.Index (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:31:01,808 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Students", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller _2380600189.Web.Controllers.StudentsController (_2380600189.Web.Mvc).
+INFO  2026-10-17 16:31:02,207 [13   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+INFO  2026-10-17 16:31:02,423 [13   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 214.6864ms.
+INFO  2026-10-17 16:31:02,424 [13   ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.StudentsController.Index (_2380600189.Web.Mvc) in 616.2508ms
+INFO  2026-10-17 16:31:02,425 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.StudentsController.Index (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:31:02,428 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/Students - 200 - text/html;+charset=utf-8 730.1556ms
+INFO  2026-10-17 16:31:17,007 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/Students/Detail/2380600189 - - -
+INFO  2026-10-17 16:31:17,010 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.StudentsController.Detail (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:31:17,015 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Detail", controller = "Students", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Detail(System.String) on controller _2380600189.Web.Controllers.StudentsController (_2380600189.Web.Mvc).
+INFO  2026-10-17 16:31:17,111 [11   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Detail.
+INFO  2026-10-17 16:31:17,128 [11   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Detail executed in 17.5102ms.
+INFO  2026-10-17 16:31:17,128 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.StudentsController.Detail (_2380600189.Web.Mvc) in 112.3572ms
+INFO  2026-10-17 16:31:17,128 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.StudentsController.Detail (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:31:17,128 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/Students/Detail/2380600189 - 200 - text/html;+charset=utf-8 121.2792ms
+INFO  2026-10-17 16:31:41,708 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/Students/AttemptDetail/1 - - -
+INFO  2026-10-17 16:31:41,709 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.StudentsController.AttemptDetail (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:31:41,714 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "AttemptDetail", controller = "Students", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AttemptDetail(Int32) on controller _2380600189.Web.Controllers.StudentsController (_2380600189.Web.Mvc).
+WARN  2026-10-17 16:31:41,742 [14   ] Microsoft.EntityFrameworkCore.Query      - Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+INFO  2026-10-17 16:31:42,242 [16   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view AttemptDetail.
+INFO  2026-10-17 16:31:42,265 [9    ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view AttemptDetail executed in 23.7208ms.
+INFO  2026-10-17 16:31:42,266 [9    ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.StudentsController.AttemptDetail (_2380600189.Web.Mvc) in 552.8406ms
+INFO  2026-10-17 16:31:42,267 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.StudentsController.AttemptDetail (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:31:42,267 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/Students/AttemptDetail/1 - 200 - text/html;+charset=utf-8 558.6778ms
+INFO  2026-10-17 16:35:06,149 [18   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/api/exam/list - - -
+INFO  2026-10-17 16:35:06,154 [18   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution successful.
+INFO  2026-10-17 16:35:06,154 [18   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:35:06,164 [18   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetPublishedExams", controller = "ExamApi", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[_2380600189.Exams.Dto.ExamListDto]]] GetPublishedExams() on controller _2380600189.Web.Controllers.ExamApiController (_2380600189.Web.Mvc).
+INFO  2026-10-17 16:35:06,165 [18   ] idateAntiforgeryTokenAuthorizationFilter - Skipping the execution of current filter as its not the most effective filter implementing the policy Microsoft.AspNetCore.Mvc.ViewFeatures.IAntiforgeryPolicy
+INFO  2026-10-17 16:35:06,224 [23   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 16:35:06,260 [23   ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc) in 95.5284ms
+INFO  2026-10-17 16:35:06,260 [23   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:35:06,260 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/api/exam/list - 200 - application/json;+charset=utf-8 111.5514ms
+DEBUG 2026-10-17 16:41:02,125 [2    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2026-10-17 16:41:02,138 [2    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2026-10-17 16:41:02,146 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189.Web.Startup._2380600189WebMvcModule, _2380600189.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:41:02,147 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189._2380600189WebCoreModule, _2380600189.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:41:02,147 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189._2380600189ApplicationModule, _2380600189.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:41:02,147 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189._2380600189CoreModule, _2380600189.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:41:02,148 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:41:02,148 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:41:02,148 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:41:02,149 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:41:02,149 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: _2380600189.EntityFrameworkCore._2380600189EntityFrameworkModule, _2380600189.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:41:02,149 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:41:02,149 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:41:02,149 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:41:02,150 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:41:02,150 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:41:02,150 [2    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=10.2.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:41:02,151 [2    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2026-10-17 16:41:02,181 [2    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:41:02,181 [2    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:41:02,181 [2    ] o.Configuration.LanguageManagementConfig - Converted _2380600189 (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:41:02,181 [2    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2026-10-17 16:41:02,376 [2    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: _2380600189.EntityFrameworkCore._2380600189DbContext, _2380600189.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2026-10-17 16:41:02,498 [2    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2026-10-17 16:41:02,543 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2026-10-17 16:41:02,572 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2026-10-17 16:41:02,595 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: _2380600189
+DEBUG 2026-10-17 16:41:02,629 [2    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2026-10-17 16:41:02,638 [2    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2026-10-17 16:41:02,641 [2    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[_2380600189.MultiTenancy.Tenant, _2380600189.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[_2380600189.Authorization.Users.User, _2380600189.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2026-10-17 16:41:02,653 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 9 classes define auto mapping attributes
+DEBUG 2026-10-17 16:41:02,653 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Users.Dto.CreateUserDto
+DEBUG 2026-10-17 16:41:02,655 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Users.Dto.UserDto
+DEBUG 2026-10-17 16:41:02,655 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2026-10-17 16:41:02,655 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Sessions.Dto.UserLoginInfoDto
+DEBUG 2026-10-17 16:41:02,655 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Roles.Dto.PermissionDto
+DEBUG 2026-10-17 16:41:02,656 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2026-10-17 16:41:02,656 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.MultiTenancy.Dto.TenantDto
+DEBUG 2026-10-17 16:41:02,656 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Web.Views.Shared.Components.TenantChange.TenantChangeViewModel
+DEBUG 2026-10-17 16:41:02,656 [2    ] Abp.AutoMapper.AbpAutoMapperModule       - _2380600189.Web.Models.Roles.EditRoleModalViewModel
+WARN  2026-10-17 16:41:03,294 [2    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Exam' has a global query filter defined and is the required end of a relationship with the entity 'ExamAttempt'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2026-10-17 16:41:03,295 [2    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Exam' has a global query filter defined and is the required end of a relationship with the entity 'PartSection'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+WARN  2026-10-17 16:41:03,295 [2    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Exam' has a global query filter defined and is the required end of a relationship with the entity 'Question'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+INFO  2026-10-17 16:41:04,458 [2    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,fa,ja,zh-Hans
+INFO  2026-10-17 16:41:04,628 [2    ] Microsoft.Hosting.Lifetime               - Now listening on: http://localhost:5000
+INFO  2026-10-17 16:41:04,629 [2    ] Microsoft.Hosting.Lifetime               - Application started. Press Ctrl+C to shut down.
+INFO  2026-10-17 16:41:04,629 [2    ] Microsoft.Hosting.Lifetime               - Hosting environment: Development
+INFO  2026-10-17 16:41:04,629 [2    ] Microsoft.Hosting.Lifetime               - Content root path: C:\Lập trình di động\KiemTra\backend\src\_2380600189.Web.Mvc
+INFO  2026-10-17 16:41:23,763 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/api/exam/list - - -
+INFO  2026-10-17 16:41:23,828 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:41:23,870 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetPublishedExams", controller = "ExamApi", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[_2380600189.Exams.Dto.ExamListDto]]] GetPublishedExams() on controller _2380600189.Web.Controllers.ExamApiController (_2380600189.Web.Mvc).
+INFO  2026-10-17 16:41:23,874 [14   ] idateAntiforgeryTokenAuthorizationFilter - Skipping the execution of current filter as its not the most effective filter implementing the policy Microsoft.AspNetCore.Mvc.ViewFeatures.IAntiforgeryPolicy
+INFO  2026-10-17 16:41:24,226 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 16:41:24,254 [9    ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc) in 379.939ms
+INFO  2026-10-17 16:41:24,255 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:41:24,258 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/api/exam/list - 200 - application/json;+charset=utf-8 495.0977ms
+INFO  2026-10-17 16:41:29,950 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/api/exam/students - - -
+INFO  2026-10-17 16:41:29,953 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.ExamApiController.GetStudents (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:41:29,967 [9    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetStudents", controller = "ExamApi", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[_2380600189.Exams.Dto.StudentSummaryDto]]] GetStudents(System.String) on controller _2380600189.Web.Controllers.ExamApiController (_2380600189.Web.Mvc).
+INFO  2026-10-17 16:41:29,967 [9    ] idateAntiforgeryTokenAuthorizationFilter - Skipping the execution of current filter as its not the most effective filter implementing the policy Microsoft.AspNetCore.Mvc.ViewFeatures.IAntiforgeryPolicy
+INFO  2026-10-17 16:41:30,040 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 16:41:30,044 [9    ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.ExamApiController.GetStudents (_2380600189.Web.Mvc) in 77.3225ms
+INFO  2026-10-17 16:41:30,044 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.ExamApiController.GetStudents (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:41:30,045 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/api/exam/students - 200 - application/json;+charset=utf-8 94.9872ms
+INFO  2026-10-17 16:42:15,853 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/api/exam/list - - -
+INFO  2026-10-17 16:42:15,854 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:42:15,856 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetPublishedExams", controller = "ExamApi", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[_2380600189.Exams.Dto.ExamListDto]]] GetPublishedExams() on controller _2380600189.Web.Controllers.ExamApiController (_2380600189.Web.Mvc).
+INFO  2026-10-17 16:42:15,856 [11   ] idateAntiforgeryTokenAuthorizationFilter - Skipping the execution of current filter as its not the most effective filter implementing the policy Microsoft.AspNetCore.Mvc.ViewFeatures.IAntiforgeryPolicy
+INFO  2026-10-17 16:42:15,875 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing OkObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2026-10-17 16:42:15,875 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc) in 19.454ms
+INFO  2026-10-17 16:42:15,875 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.ExamApiController.GetPublishedExams (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:42:15,876 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/api/exam/list - 200 - application/json;+charset=utf-8 22.8270ms
+INFO  2026-10-17 16:46:33,647 [21   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/ - - -
+INFO  2026-10-17 16:46:33,681 [21   ] uthorization.DefaultAuthorizationService - Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+INFO  2026-10-17 16:46:33,686 [21   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was challenged.
+INFO  2026-10-17 16:46:33,686 [21   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/ - 302 0 - 39.0626ms
+INFO  2026-10-17 16:46:33,696 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/Account/Login?ReturnUrl=%2F - - -
+INFO  2026-10-17 16:46:33,703 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.AccountController.Login (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:46:33,710 [20   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Login(System.String, System.String, System.String) on controller _2380600189.Web.Controllers.AccountController (_2380600189.Web.Mvc).
+INFO  2026-10-17 16:46:34,087 [20   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Login.
+INFO  2026-10-17 16:46:34,569 [20   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Login executed in 492.2999ms.
+INFO  2026-10-17 16:46:34,570 [20   ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.AccountController.Login (_2380600189.Web.Mvc) in 859.4257ms
+INFO  2026-10-17 16:46:34,570 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.AccountController.Login (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:46:34,573 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/Account/Login?ReturnUrl=%2F - 200 - text/html;+charset=utf-8 877.3106ms
+INFO  2026-10-17 16:46:34,599 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/account-layout.min.css - - -
+INFO  2026-10-17 16:46:34,601 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/account-layout.min.js - - -
+INFO  2026-10-17 16:46:34,602 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=639278520626417390 - - -
+INFO  2026-10-17 16:46:34,602 [21   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/libs/jquery-validate/localization/messages_fr.min.js - - -
+INFO  2026-10-17 16:46:34,603 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)'
+INFO  2026-10-17 16:46:34,604 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=639278520626417390 - - -
+INFO  2026-10-17 16:46:34,604 [21   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/libs/jquery-validate/localization/messages_fr.min.js - 404 0 - 2.0195ms
+INFO  2026-10-17 16:46:34,604 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/account-layout.min.css - 404 0 - 5.5058ms
+INFO  2026-10-17 16:46:34,604 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/account-layout.min.js - 404 0 - 2.7285ms
+INFO  2026-10-17 16:46:34,604 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)'
+INFO  2026-10-17 16:46:34,604 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/Account/Login.js?v=mbhSZ86C5pmN44XAlaYyJaw0nfqN5-ODCoXqV3UJxIs - - -
+INFO  2026-10-17 16:46:34,605 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/view-resources/Views/_Bundles/account-layout.min.js, Response status code: 404
+INFO  2026-10-17 16:46:34,605 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/view-resources/Views/_Bundles/account-layout.min.css, Response status code: 404
+INFO  2026-10-17 16:46:34,605 [21   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/libs/jquery-validate/localization/messages_fr.min.js, Response status code: 404
+INFO  2026-10-17 16:46:34,607 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/Shared/Components/TenantChange/Default.js?v=639278523945670489 - - -
+INFO  2026-10-17 16:46:34,616 [17   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetScripts(System.String, Boolean) on controller Abp.AspNetCore.Mvc.Controllers.AbpScriptsController (Abp.AspNetCore).
+INFO  2026-10-17 16:46:34,617 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ContentResult GetAll(Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) on controller Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController (Abp.AspNetCore).
+INFO  2026-10-17 16:46:34,622 [15   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Account/Login.js'. Physical path: 'C:\Lập trình di động\KiemTra\backend\src\_2380600189.Web.Mvc\wwwroot\view-resources\Views\Account\Login.js'
+INFO  2026-10-17 16:46:34,622 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/view-resources/Views/Account/Login.js?v=mbhSZ86C5pmN44XAlaYyJaw0nfqN5-ODCoXqV3UJxIs - 200 410 text/javascript 17.7425ms
+INFO  2026-10-17 16:46:34,625 [20   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Shared/Components/TenantChange/Default.js'. Physical path: 'C:\Lập trình di động\KiemTra\backend\src\_2380600189.Web.Mvc\wwwroot\view-resources\Views\Shared\Components\TenantChange\Default.js'
+INFO  2026-10-17 16:46:34,625 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/view-resources/Views/Shared/Components/TenantChange/Default.js?v=639278523945670489 - 200 370 text/javascript 17.9786ms
+WARN  2026-10-17 16:46:34,666 [22   ] ng.AspNetCoreApiDescriptionModelProvider - Controller 'ExamApi' contains more than one action with name 'GetPublishedExams' for module 'app'. Ignored: System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[_2380600189.Exams.Dto.ExamListDto]]] GetPublishedExams()
+WARN  2026-10-17 16:46:34,668 [22   ] ng.AspNetCoreApiDescriptionModelProvider - Controller 'ExamApi' contains more than one action with name 'GetExamForStudent' for module 'app'. Ignored: System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[_2380600189.Exams.Dto.ExamDetailDto]] GetExamForStudent(Int32)
+WARN  2026-10-17 16:46:34,668 [22   ] ng.AspNetCoreApiDescriptionModelProvider - Controller 'ExamApi' contains more than one action with name 'SubmitExam' for module 'app'. Ignored: System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[_2380600189.Exams.Dto.ExamResultDto]] SubmitExam(_2380600189.Exams.Dto.SubmitExamInputDto)
+WARN  2026-10-17 16:46:34,668 [22   ] ng.AspNetCoreApiDescriptionModelProvider - Controller 'ExamApi' contains more than one action with name 'GetExamResult' for module 'app'. Ignored: System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[_2380600189.Exams.Dto.ExamResultDto]] GetExamResult(Int32)
+WARN  2026-10-17 16:46:34,668 [22   ] ng.AspNetCoreApiDescriptionModelProvider - Controller 'ExamApi' contains more than one action with name 'GetStatistics' for module 'app'. Ignored: System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[_2380600189.Exams.Dto.ExamStatisticDto]] GetStatistics(Int32)
+WARN  2026-10-17 16:46:34,668 [22   ] ng.AspNetCoreApiDescriptionModelProvider - Controller 'ExamApi' contains more than one action with name 'GetAllExams' for module 'app'. Ignored: System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[_2380600189.Exams.Dto.ExamListDto]]] GetAllExams()
+WARN  2026-10-17 16:46:34,668 [22   ] ng.AspNetCoreApiDescriptionModelProvider - Controller 'ExamApi' contains more than one action with name 'GetStudents' for module 'app'. Ignored: System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[_2380600189.Exams.Dto.StudentSummaryDto]]] GetStudents(System.String)
+INFO  2026-10-17 16:46:34,671 [17   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2026-10-17 16:46:34,672 [17   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 55.1079ms
+INFO  2026-10-17 16:46:34,672 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)'
+INFO  2026-10-17 16:46:34,672 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=639278520626417390 - 200 24671 application/x-javascript;+charset=utf-8 68.0131ms
+INFO  2026-10-17 16:46:34,675 [22   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2026-10-17 16:46:34,676 [22   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 58.3152ms
+INFO  2026-10-17 16:46:34,676 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)'
+INFO  2026-10-17 16:46:34,676 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=639278520626417390 - 200 16443 application/x-javascript 74.0975ms
+INFO  2026-10-17 16:46:34,949 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/img/favicon.ico - - -
+INFO  2026-10-17 16:46:34,951 [20   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/img/favicon.ico'. Physical path: 'C:\Lập trình di động\KiemTra\backend\src\_2380600189.Web.Mvc\wwwroot\img\favicon.ico'
+INFO  2026-10-17 16:46:34,952 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/img/favicon.ico - 200 1150 image/x-icon 2.1862ms
+INFO  2026-10-17 16:46:42,065 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/Exams - - -
+INFO  2026-10-17 16:46:42,066 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.ExamsController.Index (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:46:42,073 [17   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Exams", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller _2380600189.Web.Controllers.ExamsController (_2380600189.Web.Mvc).
+INFO  2026-10-17 16:46:42,117 [17   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+INFO  2026-10-17 16:46:42,262 [17   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 145.6545ms.
+INFO  2026-10-17 16:46:42,262 [17   ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.ExamsController.Index (_2380600189.Web.Mvc) in 189.527ms
+INFO  2026-10-17 16:46:42,262 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.ExamsController.Index (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:46:42,263 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/Exams - 200 - text/html;+charset=utf-8 197.4145ms
+INFO  2026-10-17 16:46:42,273 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/img/avatar.png - - -
+INFO  2026-10-17 16:46:42,273 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/shared-layout.min.css - - -
+INFO  2026-10-17 16:46:42,274 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/shared-layout.min.js - - -
+INFO  2026-10-17 16:46:42,274 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/shared-layout.min.css - 404 0 - 0.9882ms
+INFO  2026-10-17 16:46:42,274 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/view-resources/Views/_Bundles/shared-layout.min.css, Response status code: 404
+INFO  2026-10-17 16:46:42,275 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/shared-layout.min.js - 404 0 - 0.7275ms
+INFO  2026-10-17 16:46:42,275 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/view-resources/Views/_Bundles/shared-layout.min.js, Response status code: 404
+INFO  2026-10-17 16:46:42,276 [22   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/img/avatar.png'. Physical path: 'C:\Lập trình di động\KiemTra\backend\src\_2380600189.Web.Mvc\wwwroot\img\avatar.png'
+INFO  2026-10-17 16:46:42,276 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/img/avatar.png - 200 7587 image/png 3.3521ms
+INFO  2026-10-17 16:46:42,281 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/shared-layout.min.css - - -
+INFO  2026-10-17 16:46:42,282 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/libs/jquery-validate/localization/messages_fr.min.js - - -
+INFO  2026-10-17 16:46:42,282 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/shared-layout.min.css - 404 0 - 0.9368ms
+INFO  2026-10-17 16:46:42,282 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=639278520626417390 - - -
+INFO  2026-10-17 16:46:42,282 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/view-resources/Views/_Bundles/shared-layout.min.css, Response status code: 404
+INFO  2026-10-17 16:46:42,283 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=639278520626417390 - - -
+INFO  2026-10-17 16:46:42,283 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)'
+INFO  2026-10-17 16:46:42,283 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/libs/jquery-validate/localization/messages_fr.min.js - 404 0 - 0.4893ms
+INFO  2026-10-17 16:46:42,283 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)'
+INFO  2026-10-17 16:46:42,283 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/libs/jquery-validate/localization/messages_fr.min.js, Response status code: 404
+INFO  2026-10-17 16:46:42,284 [22   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetScripts(System.String, Boolean) on controller Abp.AspNetCore.Mvc.Controllers.AbpScriptsController (Abp.AspNetCore).
+INFO  2026-10-17 16:46:42,284 [20   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ContentResult GetAll(Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) on controller Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController (Abp.AspNetCore).
+INFO  2026-10-17 16:46:42,289 [20   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2026-10-17 16:46:42,289 [20   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 5.4142ms
+INFO  2026-10-17 16:46:42,289 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)'
+INFO  2026-10-17 16:46:42,290 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=639278520626417390 - 200 16443 application/x-javascript 6.9994ms
+INFO  2026-10-17 16:46:42,296 [22   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2026-10-17 16:46:42,296 [22   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 11.8085ms
+INFO  2026-10-17 16:46:42,296 [22   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)'
+INFO  2026-10-17 16:46:42,296 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=639278520626417390 - 200 24671 application/x-javascript;+charset=utf-8 13.5968ms
+INFO  2026-10-17 16:46:46,402 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/ - - -
+INFO  2026-10-17 16:46:46,404 [22   ] uthorization.DefaultAuthorizationService - Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+INFO  2026-10-17 16:46:46,405 [22   ] tion.Cookies.CookieAuthenticationHandler - AuthenticationScheme: Identity.Application was challenged.
+INFO  2026-10-17 16:46:46,405 [22   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/ - 302 0 - 3.6857ms
+INFO  2026-10-17 16:46:46,410 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/Account/Login?ReturnUrl=%2F - - -
+INFO  2026-10-17 16:46:46,417 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.AccountController.Login (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:46:46,420 [20   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Login(System.String, System.String, System.String) on controller _2380600189.Web.Controllers.AccountController (_2380600189.Web.Mvc).
+INFO  2026-10-17 16:46:46,472 [20   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Login.
+INFO  2026-10-17 16:46:46,483 [20   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Login executed in 10.9486ms.
+INFO  2026-10-17 16:46:46,483 [20   ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.AccountController.Login (_2380600189.Web.Mvc) in 62.6636ms
+INFO  2026-10-17 16:46:46,483 [20   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.AccountController.Login (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:46:46,484 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/Account/Login?ReturnUrl=%2F - 200 - text/html;+charset=utf-8 73.8321ms
+INFO  2026-10-17 16:46:46,500 [21   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/account-layout.min.css - - -
+INFO  2026-10-17 16:46:46,500 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/account-layout.min.js - - -
+INFO  2026-10-17 16:46:46,500 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/libs/jquery-validate/localization/messages_fr.min.js - - -
+INFO  2026-10-17 16:46:46,500 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=639278520626417390 - - -
+INFO  2026-10-17 16:46:46,501 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)'
+INFO  2026-10-17 16:46:46,501 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=639278520626417390 - - -
+INFO  2026-10-17 16:46:46,501 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/account-layout.min.js - 404 0 - 0.8739ms
+INFO  2026-10-17 16:46:46,501 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/libs/jquery-validate/localization/messages_fr.min.js - 404 0 - 0.6580ms
+INFO  2026-10-17 16:46:46,501 [20   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/view-resources/Views/_Bundles/account-layout.min.js, Response status code: 404
+INFO  2026-10-17 16:46:46,501 [21   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/account-layout.min.css - 404 0 - 0.9456ms
+INFO  2026-10-17 16:46:46,501 [3    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/libs/jquery-validate/localization/messages_fr.min.js, Response status code: 404
+INFO  2026-10-17 16:46:46,501 [21   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/view-resources/Views/_Bundles/account-layout.min.css, Response status code: 404
+INFO  2026-10-17 16:46:46,501 [15   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)'
+INFO  2026-10-17 16:46:46,501 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/Shared/Components/TenantChange/Default.js?v=639278524064830236 - - -
+INFO  2026-10-17 16:46:46,502 [15   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetScripts(System.String, Boolean) on controller Abp.AspNetCore.Mvc.Controllers.AbpScriptsController (Abp.AspNetCore).
+INFO  2026-10-17 16:46:46,502 [17   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ContentResult GetAll(Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) on controller Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController (Abp.AspNetCore).
+INFO  2026-10-17 16:46:46,503 [23   ] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/view-resources/Views/Shared/Components/TenantChange/Default.js'. Physical path: 'C:\Lập trình di động\KiemTra\backend\src\_2380600189.Web.Mvc\wwwroot\view-resources\Views\Shared\Components\TenantChange\Default.js'
+INFO  2026-10-17 16:46:46,503 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/view-resources/Views/Shared/Components/TenantChange/Default.js?v=639278524064830236 - 200 370 text/javascript 1.8146ms
+INFO  2026-10-17 16:46:46,504 [17   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2026-10-17 16:46:46,505 [17   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 2.16ms
+INFO  2026-10-17 16:46:46,505 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)'
+INFO  2026-10-17 16:46:46,505 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=639278520626417390 - 200 16443 application/x-javascript 4.7458ms
+INFO  2026-10-17 16:46:46,507 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/account-layout.min.css - - -
+INFO  2026-10-17 16:46:46,509 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/account-layout.min.css - 404 0 - 1.3150ms
+INFO  2026-10-17 16:46:46,509 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/view-resources/Views/_Bundles/account-layout.min.css, Response status code: 404
+INFO  2026-10-17 16:46:46,512 [15   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2026-10-17 16:46:46,512 [15   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 9.9344ms
+INFO  2026-10-17 16:46:46,512 [15   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)'
+INFO  2026-10-17 16:46:46,513 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=639278520626417390 - 200 24671 application/x-javascript;+charset=utf-8 11.8615ms
+INFO  2026-10-17 16:46:52,316 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/Students - - -
+INFO  2026-10-17 16:46:52,319 [23   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint '_2380600189.Web.Controllers.StudentsController.Index (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:46:52,337 [23   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Students", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller _2380600189.Web.Controllers.StudentsController (_2380600189.Web.Mvc).
+INFO  2026-10-17 16:46:52,365 [17   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executing ViewResult, running view Index.
+INFO  2026-10-17 16:46:52,406 [17   ] Core.Mvc.ViewFeatures.ViewResultExecutor - Executed ViewResult - view Index executed in 41.6571ms.
+INFO  2026-10-17 16:46:52,406 [17   ] c.Infrastructure.ControllerActionInvoker - Executed action _2380600189.Web.Controllers.StudentsController.Index (_2380600189.Web.Mvc) in 68.8396ms
+INFO  2026-10-17 16:46:52,406 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint '_2380600189.Web.Controllers.StudentsController.Index (_2380600189.Web.Mvc)'
+INFO  2026-10-17 16:46:52,407 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/Students - 200 - text/html;+charset=utf-8 90.8752ms
+INFO  2026-10-17 16:46:52,427 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/shared-layout.min.css - - -
+INFO  2026-10-17 16:46:52,427 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/libs/jquery-validate/localization/messages_fr.min.js - - -
+INFO  2026-10-17 16:46:52,427 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/shared-layout.min.js - - -
+INFO  2026-10-17 16:46:52,430 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/shared-layout.min.js - 404 0 - 2.4070ms
+INFO  2026-10-17 16:46:52,430 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/libs/jquery-validate/localization/messages_fr.min.js - 404 0 - 2.3485ms
+INFO  2026-10-17 16:46:52,430 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/view-resources/Views/_Bundles/shared-layout.min.css - 404 0 - 2.4068ms
+INFO  2026-10-17 16:46:52,430 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/view-resources/Views/_Bundles/shared-layout.min.css, Response status code: 404
+INFO  2026-10-17 16:46:52,430 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/libs/jquery-validate/localization/messages_fr.min.js, Response status code: 404
+INFO  2026-10-17 16:46:52,430 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5000/view-resources/Views/_Bundles/shared-layout.min.js, Response status code: 404
+INFO  2026-10-17 16:46:52,434 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=639278520626417390 - - -
+INFO  2026-10-17 16:46:52,434 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=639278520626417390 - - -
+INFO  2026-10-17 16:46:52,435 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)'
+INFO  2026-10-17 16:46:52,435 [23   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)'
+INFO  2026-10-17 16:46:52,438 [17   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetAll", controller = "AbpServiceProxies", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ContentResult GetAll(Abp.AspNetCore.Mvc.Proxying.ApiProxyGenerationModel) on controller Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController (Abp.AspNetCore).
+INFO  2026-10-17 16:46:52,438 [23   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "GetScripts", controller = "AbpScripts", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetScripts(System.String, Boolean) on controller Abp.AspNetCore.Mvc.Controllers.AbpScriptsController (Abp.AspNetCore).
+INFO  2026-10-17 16:46:52,440 [17   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript
+INFO  2026-10-17 16:46:52,440 [17   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore) in 2.2238ms
+INFO  2026-10-17 16:46:52,440 [17   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Proxying.AbpServiceProxiesController.GetAll (Abp.AspNetCore)'
+INFO  2026-10-17 16:46:52,440 [17   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/AbpServiceProxies/GetAll?v=639278520626417390 - 200 16443 application/x-javascript 6.0446ms
+INFO  2026-10-17 16:46:52,448 [23   ] Mvc.Infrastructure.ContentResultExecutor - Executing ContentResult with HTTP Response ContentType of application/x-javascript; charset=utf-8
+INFO  2026-10-17 16:46:52,449 [23   ] c.Infrastructure.ControllerActionInvoker - Executed action Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore) in 10.8094ms
+INFO  2026-10-17 16:46:52,449 [23   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Abp.AspNetCore.Mvc.Controllers.AbpScriptsController.GetScripts (Abp.AspNetCore)'
+INFO  2026-10-17 16:46:52,449 [23   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/1.1 GET http://localhost:5000/AbpScripts/GetScripts?v=639278520626417390 - 200 24671 application/x-javascript;+charset=utf-8 14.7918ms

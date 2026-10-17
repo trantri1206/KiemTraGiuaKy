@@ -1,0 +1,220 @@
+/* prevent the drop down icon going onto a new line for the top bar language link */
+.top-bar-language-nav-link {
+  min-width: 65px;
+}
+
+/* bootstrap model showing two scroll bars */
+html {
+  overflow: visible;
+}
+
+/* main sidebar not under model */
+.modal {
+  z-index: 1110;
+}
+
+.form-group.required .col-form-label:after {
+  color: #d00;
+  content: "*";
+  position: absolute;
+  margin-left: 3px;
+}
+
+.nav-user-menu .user-image {
+  width: 20px;
+  margin-right: 4px;
+  margin-top: -4px;
+}
+
+.famfamfam-flags {
+  display: inline-block;
+}
+
+.sidebar ul li p {
+  white-space: nowrap !important;
+  text-overflow: ellipsis;
+  transition: opacity 0.5s ease-in-out !important;
+  opacity: 1;
+}
+
+.sidebar-mini .main-sidebar .sidebar,
+.sidebar-mini .main-sidebar .sidebar:hover {
+  overflow-x: auto !important;
+  width: 250px;
+  transition: width 0.3s ease-in-out;
+}
+
+/* =========================================================
+   LEXORA TOEIC DESIGN SYSTEM (From Figma)
+   ========================================================= */
+:root {
+  --lexora-navy: #0F1E36;
+  --lexora-navy-dark: #0A1424;
+  --lexora-primary: #2563EB;
+  --lexora-primary-hover: #1D4ED8;
+  --lexora-accent: #10B981;
+  --lexora-bg-light: #F8FAFC;
+  --lexora-card-bg: #FFFFFF;
+  --lexora-border: #E2E8F0;
+  --lexora-text-main: #1E293B;
+  --lexora-text-muted: #64748B;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #F8FAFC !important;
+  color: #1E293B;
+}
+
+/* Sidebar Styling */
+.main-sidebar, .sidebar-dark-primary {
+  background-color: var(--lexora-navy) !important;
+}
+
+.main-sidebar .sidebar {
+  padding-top: 10px;
+}
+
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link {
+  color: #94A3B8;
+  border-radius: 8px;
+  margin: 3px 12px;
+  padding: 10px 14px;
+  font-weight: 500;
+  font-size: 0.92rem;
+  transition: all 0.2s ease;
+}
+
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #FFFFFF;
+}
+
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active {
+  background: linear-gradient(135deg, #2563EB, #1D4ED8) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+  font-weight: 600;
+}
+
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link i {
+  font-size: 1.05rem;
+  margin-right: 10px;
+}
+
+/* Cards & Containers */
+.lexora-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 2px 8px rgba(15, 30, 54, 0.04);
+  transition: box-shadow 0.2s ease;
+}
+
+.lexora-card:hover {
+  box-shadow: 0 6px 16px rgba(15, 30, 54, 0.08);
+}
+
+.lexora-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+}
+
+.lexora-badge-p5 {
+  background-color: #EEF2FF;
+  color: #4F46E5;
+  border: 1px solid #C7D2FE;
+}
+
+.lexora-badge-p6 {
+  background-color: #EFF6FF;
+  color: #2563EB;
+  border: 1px solid #BFDBFE;
+}
+
+.lexora-badge-p7 {
+  background-color: #F5F3FF;
+  color: #7C3AED;
+  border: 1px solid #DDD6FE;
+}
+
+/* Progress Step Header for Import */
+.lexora-stepper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.lexora-step-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #64748B;
+  font-size: 0.9rem;
+}
+
+.lexora-step-item.active {
+  color: #2563EB;
+}
+
+.lexora-step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E2E8F0;
+  color: #475569;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.lexora-step-item.active .lexora-step-num {
+  background-color: #2563EB;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+}
+
+.lexora-step-item.completed .lexora-step-num {
+  background-color: #10B981;
+  color: #FFFFFF;
+}
+
+/* Table Design */
+.lexora-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.lexora-table thead th {
+  background-color: #F8FAFC;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #E2E8F0;
+  padding: 12px 16px;
+}
+
+.lexora-table tbody td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #F1F5F9;
+  vertical-align: middle;
+  font-size: 0.9rem;
+}
+
+.lexora-table tbody tr:hover {
+  background-color: #F8FAFC;
+}
+

@@ -1,0 +1,61 @@
+@{
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+    var action = ViewContext.RouteData.Values["action"]?.ToString() ?? "";
+    bool isExams = controller == "Exams" && action != "Import";
+    bool isImport = controller == "Exams" && action == "Import";
+    bool isStudents = controller == "Students";
+}
+<nav class="main-header navbar navbar-expand-md lp-topnav">
+    <div class="container-fluid px-lg-4">
+        <!-- Logo -->
+        <a asp-controller="Exams" asp-action="Index" class="lp-brand">
+            <span class="lp-brand-icon"><i class="fas fa-graduation-cap"></i></span>
+            <span class="lp-brand-text">
+                <strong>TOEIC Exam Portal</strong>
+                <small>Cổng Giảng viên • 2380600189</small>
+            </span>
+        </a>
+
+        <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#lpNav"
+                aria-controls="lpNav" aria-expanded="false" aria-label="Mở menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- 2 nút chính: Quản lý bài thi / Quản lý sinh viên -->
+        <div class="collapse navbar-collapse order-3" id="lpNav">
+            <ul class="navbar-nav lp-nav mx-lg-auto">
+                <li class="nav-item">
+                    <a id="btn-nav-exams" asp-controller="Exams" asp-action="Index"
+                       class="lp-nav-btn @(isExams ? "active" : "")">
+                        <i class="fas fa-file-alt"></i> Quản lý bài thi
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a id="btn-nav-students" asp-controller="Students" asp-action="Index"
+                       class="lp-nav-btn @(isStudents ? "active" : "")">
+                        <i class="fas fa-user-graduate"></i> Quản lý sinh viên
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a id="btn-nav-import" asp-controller="Exams" asp-action="Import"
+                       class="lp-nav-btn lp-nav-btn-ghost @(isImport ? "active" : "")">
+                        <i class="fas fa-file-word"></i> Import Word
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Người dùng -->
+        <ul class="order-2 order-md-3 navbar-nav ml-auto align-items-center">
+            <li class="nav-item d-none d-lg-block mr-3">
+                <span class="lp-chip"><span class="lp-dot"></span>Hệ thống đang hoạt động</span>
+            </li>
+            <li class="nav-item">
+                <span class="lp-user">
+                    <span class="lp-avatar">GV</span>
+                    <span class="d-none d-sm-inline">Giảng viên</span>
+                </span>
+            </li>
+        </ul>
+    </div>
+</nav>
